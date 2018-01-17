@@ -15,7 +15,26 @@ module.exports = {
   name: 'ember-adminbsb',
 
 
+  included() {
+    this._super.included.apply(this, arguments);
+    let app;
 
+    // If the addon has the _findHost() method (in ember-cli >= 2.7.0), we'll just
+    // use that.
+    if (typeof this._findHost === 'function') {
+      app = this._findHost();
+    } else {
+      // Otherwise, we'll use this implementation borrowed from the _findHost()
+      // method in ember-cli.
+      let current = this;
+      do {
+        app = current.app || app;
+      } while (current.parent.parent && (current = current.parent));
+    }
+
+    app.import('vendor/adminbsb-materialdesign-slimscroll/jquery.slimscroll.js');
+
+  },
 
 
   contentFor(type, config) {
@@ -43,6 +62,24 @@ module.exports = {
   },
   config() {
     return { 'ember-adminbsb': { insertFontLinks: true } };
+  },
+
+  treeForVendor(tree) {
+    let trees = [];
+
+    let slimscrollFiles = fastbootTransform(new Funnel('node_modules/adminbsb-materialdesign', {
+      files:['jquery.slimscroll.js'] ,
+      srcDir: 'plugins/jquery-slimscroll',
+      destDir: 'adminbsb-materialdesign-slimscroll',
+    }));
+
+    trees = trees.concat([slimscrollFiles]);
+
+    if (tree) {
+      trees.push(tree);
+    }
+
+    return mergeTrees(trees);
   },
 
 

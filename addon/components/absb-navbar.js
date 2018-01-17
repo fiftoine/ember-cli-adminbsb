@@ -34,6 +34,7 @@ export default Component.extend({
 
   actions:{
     toggleSidebar(){
+      this.set('collapsed', true);
       this.get('dashboard').trigger('toggleLeftSidebar');
       //this.sendAction('toggleSidebar');
 
@@ -41,6 +42,7 @@ export default Component.extend({
 
     toggleRightSidebar(){
       //this.sendAction('toggleRightSidebar');
+      this.set('collapsed', true);
       this.get('dashboard').trigger('toggleRightSidebar');
     },
 

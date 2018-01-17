@@ -27,6 +27,11 @@ export default Component.extend({
 
       }
     });
+
+
+    
+
+
   },
 
   toggleRightSidebar(){

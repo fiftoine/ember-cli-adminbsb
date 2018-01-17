@@ -33,6 +33,8 @@ export default Component.extend({
       if (e.keyCode == 27) {
         this.set('open',false);
         this.set('searchTerms', '');
+      }else if(e.keyCode == 13){
+        this.sendAction('onSearch', this.get('searchTerms'));
       }
     }
   }

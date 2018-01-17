@@ -50,6 +50,16 @@ export default Component.extend({
 
       }
     });
+
+
+    var height = ($(window).height() - ($('.legal').outerHeight() + $('.user-info').outerHeight() + $('.navbar').innerHeight()));
+    this.set('menuHeight',height);
+
+    var rightListHeight  = $(window).height() - ($('.navbar').innerHeight() + $('.nav-tabs').outerHeight());
+    this.set('rightListHeight', rightListHeight);
+
+
+
   },
 
 

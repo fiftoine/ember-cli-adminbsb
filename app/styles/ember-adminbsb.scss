@@ -183,3 +183,13 @@
 /* For Internet Explorer 11 ===================== */
 @import 'adminbsb-materialdesign/browser-support/_ie11.scss';
 @import 'adminbsb-materialdesign/themes/all-themes';
+
+
+.sidebar .menu{
+  overflow-y:visible;
+}
+
+ul.navbar-dropdown-menu  li a{
+  display: block;
+
+}
