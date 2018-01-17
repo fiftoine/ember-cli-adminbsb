@@ -1,0 +1,8 @@
+
+<div class="search-icon">
+    <i class="material-icons">search</i>
+</div>
+{{input placeholder="START TYPING..." value=searchTerms keyUp=(action 'searchKeyUp')}}
+<div class="close-search" {{action 'closeSearch'}}>
+    <i class="material-icons">close</i>
+</div>
