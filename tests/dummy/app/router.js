@@ -33,6 +33,12 @@ Router.map(function() {
       this.route('breadcrumbs');
       this.route('buttons');
       this.route('collapse');
+      this.route('colors');
+      this.route('dialogs');
+      this.route('icons');
+      this.route('labels');
+      this.route('list-groups');
+      this.route('media');
     });
   });
 });

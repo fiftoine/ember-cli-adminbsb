@@ -37,6 +37,7 @@ module.exports = {
     app.import('vendor/adminbsb-materialdesign-countto/jquery.countTo.js');
     app.import('vendor/adminbsb-materialdesign-sparkline/jquery.sparkline.js');
     app.import('vendor/adminbsb-materialdesign-waves/waves.js');
+    app.import('vendor/adminbsb-materialdesign-sweetalert/sweetalert.min.js');
 
   },
 
@@ -119,7 +120,13 @@ module.exports = {
       destDir: 'adminbsb-materialdesign-waves',
     }));
 
-    trees = trees.concat([slimscrollFiles, waitMeFiles, countToFiles, sparklineFiles, wavesFiles]);
+    let sweetAlertFiles =fastbootTransform(new Funnel('node_modules/adminbsb-materialdesign', {
+      files:['sweetalert.min.js'] ,
+      srcDir: '/plugins/sweetalert',
+      destDir: 'adminbsb-materialdesign-sweetalert',
+    }));
+
+    trees = trees.concat([slimscrollFiles, waitMeFiles, countToFiles, sparklineFiles, wavesFiles, sweetAlertFiles]);
 
     if (tree) {
       trees.push(tree);
@@ -291,8 +298,15 @@ module.exports = {
       annotation: 'AdminBsbMaterialDesign-waitme'
     });
 
+    let sweetAlertFiles = new Funnel('node_modules/adminbsb-materialdesign', {
+      files:['sweetalert.css'] ,
+      srcDir: '/plugins/sweetalert',
+      destDir: 'adminbsb-materialdesign',
+      annotation: 'AdminBsbMaterialDesign-sweetalert'
+    });
 
-   return this._super.treeForStyles(mergeTrees([scssFiles,materializeFiles, bootstrapFiles, wavesFiles,animateFiles,morrisFiles, waitmeFiles, tree], { overwrite: true }));
+
+   return this._super.treeForStyles(mergeTrees([scssFiles,materializeFiles, bootstrapFiles, wavesFiles,animateFiles,morrisFiles, waitmeFiles,sweetAlertFiles, tree], { overwrite: true }));
  },
 
  pathBase(packageName) {
