@@ -33,7 +33,29 @@ module.exports = {
     }
 
     app.import('vendor/adminbsb-materialdesign-slimscroll/jquery.slimscroll.js');
+    app.import('vendor/adminbsb-materialdesign-waitme/waitMe.js');
+    app.import('vendor/adminbsb-materialdesign-countto/jquery.countTo.js');
+    app.import('vendor/adminbsb-materialdesign-sparkline/jquery.sparkline.js');
+    app.import('vendor/adminbsb-materialdesign-waves/waves.js');
 
+  },
+
+  afterInstall(){
+    this.addAddonsToProject({
+      // a packages array defines the addons to install
+      packages: [
+        // name is the addon name, and target (optional) is the version
+        {name: 'ember-bootstrap', target: '1.0.0'},
+        {name: 'ember-power-select', target: '1.10.4'},
+        {name: 'ember-composable-helpers', target: '2.1.0'},
+        {name: 'ember-math-helpers', target: '2.4.0'},
+        {name: 'ember-cli-string-helpers', target: '1.6.0'},
+        {name: 'ember-truth-helpers', target: '2.0.0'},
+        {name: 'ember-get-helper', target: '1.1.0'},
+        {name: 'ember-toggle-helper', target: '0.1.1'},
+
+      ]
+    })
   },
 
 
@@ -73,7 +95,31 @@ module.exports = {
       destDir: 'adminbsb-materialdesign-slimscroll',
     }));
 
-    trees = trees.concat([slimscrollFiles]);
+    let waitMeFiles = fastbootTransform(new Funnel('node_modules/adminbsb-materialdesign', {
+      files:['waitMe.js'] ,
+      srcDir: 'plugins/waitme',
+      destDir: 'adminbsb-materialdesign-waitme',
+    }));
+
+    let countToFiles = fastbootTransform(new Funnel('node_modules/adminbsb-materialdesign', {
+      files:['jquery.countTo.js'] ,
+      srcDir: 'plugins/jquery-countto',
+      destDir: 'adminbsb-materialdesign-countto',
+    }));
+
+    let sparklineFiles = fastbootTransform(new Funnel('node_modules/adminbsb-materialdesign', {
+      files:['jquery.sparkline.js'] ,
+      srcDir: 'plugins/jquery-sparkline',
+      destDir: 'adminbsb-materialdesign-sparkline',
+    }));
+
+    let wavesFiles =fastbootTransform(new Funnel('node_modules/adminbsb-materialdesign', {
+      files:['waves.js'] ,
+      srcDir: '/plugins/node-waves',
+      destDir: 'adminbsb-materialdesign-waves',
+    }));
+
+    trees = trees.concat([slimscrollFiles, waitMeFiles, countToFiles, sparklineFiles, wavesFiles]);
 
     if (tree) {
       trees.push(tree);
@@ -234,8 +280,19 @@ module.exports = {
       annotation: 'AdminBsbMaterialDesign-morris'
     });
 
+    let waitmeScssFiles = [
+        'waitMe.css'
+    ];
 
-   return this._super.treeForStyles(mergeTrees([scssFiles,materializeFiles, bootstrapFiles, wavesFiles,animateFiles,morrisFiles, tree], { overwrite: true }));
+    let waitmeFiles = new Funnel('node_modules/adminbsb-materialdesign', {
+      files:waitmeScssFiles ,
+      srcDir: '/plugins/waitme',
+      destDir: 'adminbsb-materialdesign',
+      annotation: 'AdminBsbMaterialDesign-waitme'
+    });
+
+
+   return this._super.treeForStyles(mergeTrees([scssFiles,materializeFiles, bootstrapFiles, wavesFiles,animateFiles,morrisFiles, waitmeFiles, tree], { overwrite: true }));
  },
 
  pathBase(packageName) {

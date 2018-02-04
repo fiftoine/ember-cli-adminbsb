@@ -7,6 +7,33 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('board', function() {
+    this.route('typography');
+    this.route('helper-classes');
+
+    this.route('widgets', function() {
+      this.route('cards', function() {
+        this.route('basic-cards');
+        this.route('colored');
+        this.route('no-header');
+      });
+
+      this.route('infobox', function() {
+        this.route('infobox-1');
+        this.route('infobox-2');
+        this.route('infobox-3');
+        this.route('infobox-4');
+        this.route('infobox-5');
+      });
+    });
+
+    this.route('ui', function() {
+      this.route('alerts');
+      this.route('badges');
+      this.route('breadcrumbs');
+      this.route('buttons');
+    });
+  });
 });
 
 export default Router;

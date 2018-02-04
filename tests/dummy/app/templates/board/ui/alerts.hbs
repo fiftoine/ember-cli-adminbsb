@@ -1,0 +1,157 @@
+
+            <div class="block-header">
+                <h2>ALERTS</h2>
+            </div>
+
+            <!-- Basic Alerts -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                BASIC ALERTS
+                                <small>Wrap any text and an optional dismiss button in <code>.alert</code> and one of the four contextual classes (e.g., <code>.alert-success</code>) for basic alert messages.</small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            <div class="alert alert-success">
+                                <strong>Well done!</strong> You successfully read this important alert message.
+                            </div>
+                            <div class="alert alert-info">
+                                <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+                            </div>
+                            <div class="alert alert-warning">
+                                <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                            </div>
+                            <div class="alert alert-danger">
+                                <strong>Oh snap!</strong> Change a few things up and try submitting again.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Basic Alerts -->
+            <!-- Material Design Alerts -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                MATERIAL DESIGN ALERTS
+                                <small>You can use material design color with <code>.bg-red, .bg-pink</code> class</small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            <div class="alert bg-pink">
+                                Lorem ipsum dolor sit amet, id fugit tollit pro, illud nostrud aliquando ad est, quo esse dolorum id
+                            </div>
+                            <div class="alert bg-orange">
+                                Lorem ipsum dolor sit amet, id fugit tollit pro, illud nostrud aliquando ad est, quo esse dolorum id
+                            </div>
+                            <div class="alert bg-teal">
+                                Lorem ipsum dolor sit amet, id fugit tollit pro, illud nostrud aliquando ad est, quo esse dolorum id
+                            </div>
+                            <div class="alert bg-green">
+                                Lorem ipsum dolor sit amet, id fugit tollit pro, illud nostrud aliquando ad est, quo esse dolorum id
+                            </div>
+                            <div class="alert bg-red">
+                                Lorem ipsum dolor sit amet, id fugit tollit pro, illud nostrud aliquando ad est, quo esse dolorum id
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Material Design Alerts -->
+            <!-- Dismissible Alerts -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                DISMISSIBLE ALERTS
+                                <small>Build on any alert by adding an optional <code>.alert-dismissible</code> and close button.</small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            {{#bs-alert dismissible=true  type="warning "}}
+                                Lorem ipsum dolor sit amet, id fugit tollit pro, illud nostrud aliquando ad est, quo esse dolorum id
+                            {{/bs-alert}}
+                            {{#bs-alert dismissible=true  class="bg-pink"}}
+                                Lorem ipsum dolor sit amet, id fugit tollit pro, illud nostrud aliquando ad est, quo esse dolorum id
+                            {{/bs-alert}}
+
+                            {{#bs-alert dismissible=true  class="bg-teal"}}
+                              Lorem ipsum dolor sit amet, id fugit tollit pro, illud nostrud aliquando ad est, quo esse dolorum id
+                            {{/bs-alert}}
+                            {{#bs-alert dismissible=true  class="bg-green"}}
+                                Lorem ipsum dolor sit amet, id fugit tollit pro, illud nostrud aliquando ad est, quo esse dolorum id
+                            {{/bs-alert}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Dismissible Alerts -->
+            <!-- Links In Alerts -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                LINKS IN ALERTS
+                                <small>Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.</small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            <div class="alert alert-success">
+                                <strong>Well done!</strong> You successfully read <a href="javascript:void(0);" class="alert-link">this important alert message</a>.
+                            </div>
+                            <div class="alert alert-info">
+                                <strong>Heads up!</strong> This <a href="javascript:void(0);" class="alert-link">alert needs your attention</a>, but it's not super important.
+                            </div>
+                            <div class="alert alert-warning">
+                                <strong>Warning!</strong> Better check yourself, you're <a href="javascript:void(0);" class="alert-link">not looking too good</a>.
+                            </div>
+                            <div class="alert alert-danger">
+                                <strong>Oh snap!</strong> <a href="javascript:void(0);" class="alert-link">Change a few things up</a> and try submitting again.
+                            </div>
+                            <div class="alert bg-pink">
+                                Lorem ipsum dolor sit amet, id fugit tollit pro, illud nostrud aliquando ad est, quo esse dolorum id
+                                <a href="javascript:void(0);" class="alert-link">alert link</a>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--

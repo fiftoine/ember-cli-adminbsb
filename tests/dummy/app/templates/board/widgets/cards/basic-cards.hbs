@@ -1,0 +1,164 @@
+
+            <div class="block-header">
+                <h2>BASIC CARD</h2>
+            </div>
+            <!-- Basic Card -->
+            <div class="row clearfix">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                Basic Card Title <small>Description text here...</small>
+                            </h2>
+
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat. Ridiculus nostra.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                Basic Card Title <small>Description text here...</small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <i class="material-icons">mic</i>
+                                    </a>
+                                </li>
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat. Ridiculus nostra.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                Basic Card Title <small>Description text here...</small>
+                            </h2>
+                            <ul class="header-dropdown m-r-0">
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <i class="material-icons">info_outline</i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <i class="material-icons">help_outline</i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">
+                            Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat. Ridiculus nostra.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Basic Card -->
+            <!-- Basic Card - With Loading -->
+            <div class="block-header">
+                <h2>
+                    BASIC CARD - WITH LOADING
+                    <small>Please click the refresh button right top of cards you want to activate loading. Taken from <a href="https://github.com/vadimsva/waitMe" target="_blank">https://github.com/vadimsva/waitMe</a></small>
+                </h2>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    {{#absb-waitme class="card" as |wm|}}
+                        <div class="header">
+                            <h2>
+                                Basic Card Title <small>Description text here...</small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                            <li>
+                                <a href="javascript:void(0);" {{action (toggle wm "loading")}}>
+                                    <i class="material-icons">loop</i>
+                                </a>
+                            </li>
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat. Ridiculus nostra.
+                        </div>
+                    {{/absb-waitme}}
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    {{#absb-waitme class="card" as |wm|}}
+                        <div class="header">
+                            <h2>
+                                Basic Card Title <small>Description text here...</small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                            <li>
+                                <a href="javascript:void(0);" {{action (toggle wm "loading")}}>
+                                    <i class="material-icons">loop</i>
+                                </a>
+                            </li>
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat. Ridiculus nostra.
+                        </div>
+                    {{/absb-waitme}}
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    {{#absb-waitme class="card" loading=prom}}
+                        <div class="header">
+                            <h2>
+                                Basic Card Title <small>Description text here...</small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                            <li>
+                                <a href="javascript:void(0);" {{action 'reload'}}>
+                                    <i class="material-icons">loop</i>
+                                </a>
+                            </li>
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat. Ridiculus nostra.
+                        </div>
+                    {{/absb-waitme}}
+                </div>
+            </div>
+            <!-- #END# Basic Card - With Loading -->

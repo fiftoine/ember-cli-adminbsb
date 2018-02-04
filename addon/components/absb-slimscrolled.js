@@ -33,6 +33,6 @@ export default Component.extend({
       options.height =  this.get('height') + "px";
     }
     this.$().slimscroll(options);
-    console.log('slimscrolled',options.height,  this);
+
   }
 });

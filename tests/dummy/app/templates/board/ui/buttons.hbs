@@ -1,0 +1,1873 @@
+
+<div class="block-header">
+    <h2>BUTTONS</h2>
+</div>
+<!-- Bootstrap Default Buttons -->
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    BOOTSTRAP DEFAULT BUTTONS
+                    <small>Use any of the available button classes to quickly create a styled button</small>
+                </h2>
+                {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                   {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                   {{#dd.menu class="pull-right" as |ddm|}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                     {{/dd.menu}}
+                 {{/bs-dropdown}}
+            </div>
+            <div class="body">
+                <div class="button-demo">
+                    {{#absb-button type="default"}}DEFAULT{{/absb-button}}
+                    {{#absb-button type="primary"}}PRIMARY{{/absb-button}}
+                    {{#absb-button type="success"}}SUCCESS{{/absb-button}}
+                    {{#absb-button type="info"}}INFO{{/absb-button}}
+                    {{#absb-button type="warning"}}WARNING{{/absb-button}}
+                    {{#absb-button type="danger"}}DANGER{{/absb-button}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #END# Bootstrap Default Buttons -->
+<!-- Metarial Design Buttons -->
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    METARIAL DESIGN BUTTONS
+                    <small>Use any of the available button classes to quickly create a styled button</small>
+                </h2>
+                {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                   {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                   {{#dd.menu class="pull-right" as |ddm|}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                     {{/dd.menu}}
+                 {{/bs-dropdown}}
+            </div>
+            <div class="body">
+                <div class="button-demo">
+                    {{#absb-button type="red"}}RED{{/absb-button}}
+                    {{#absb-button type="pink"}}PINK{{/absb-button}}
+                    {{#absb-button type="purple"}}PURPLE{{/absb-button}}
+                    {{#absb-button type="deep-purple"}}DEEP PURPLE{{/absb-button}}
+                    {{#absb-button type="indigo"}}INDIGO{{/absb-button}}
+                    {{#absb-button type="blue"}}BLUE{{/absb-button}}
+                    {{#absb-button type="light-blue"}}LIGHT BLUE{{/absb-button}}
+                    {{#absb-button type="cyan"}}CYAN{{/absb-button}}
+                    {{#absb-button type="teal"}}TEAL{{/absb-button}}
+                    {{#absb-button type="green"}}GREEN{{/absb-button}}
+                    {{#absb-button type="light-green"}}LIGHT GREEN{{/absb-button}}
+                    {{#absb-button type="lime"}}LIME{{/absb-button}}
+                    {{#absb-button type="yellow"}}YELLOW{{/absb-button}}
+                    {{#absb-button type="amber"}}AMBER{{/absb-button}}
+                    {{#absb-button type="orange"}}ORANGE{{/absb-button}}
+                    {{#absb-button type="deep-orange"}}DEEP ORANGE{{/absb-button}}
+                    {{#absb-button type="brown"}}BROWN{{/absb-button}}
+                    {{#absb-button type="grey"}}GREY{{/absb-button}}
+                    {{#absb-button type="blue-grey"}}BLUE GREY{{/absb-button}}
+                    {{#absb-button type="black" class="waves-light"}}BLACK{{/absb-button}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #END# Metarial Design Buttons -->
+<!-- Button Sizes -->
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    BUTTON SIZES
+                    <small>You can resize the buttons</small>
+                </h2>
+                {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                   {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                   {{#dd.menu class="pull-right" as |ddm|}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                     {{/dd.menu}}
+                 {{/bs-dropdown}}
+            </div>
+            <div class="body">
+                <div class="row clearfix demo-button-sizes">
+                    <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                        {{#absb-button type="red" class="btn-block btn-lg"}}LARGE{{/absb-button}}
+                        {{#absb-button type="red" class="btn-block"}}DEFAULT{{/absb-button}}
+                        {{#absb-button type="red" class="btn-block btn-sm"}}SMALL{{/absb-button}}
+                        {{#absb-button type="red" class="btn-block btn-xs"}}EXTRA SMALL{{/absb-button}}
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                      {{#absb-button type="pink" class="btn-block btn-lg"}}LARGE{{/absb-button}}
+                      {{#absb-button type="pink" class="btn-block"}}DEFAULT{{/absb-button}}
+                      {{#absb-button type="pink" class="btn-block btn-sm"}}SMALL{{/absb-button}}
+                      {{#absb-button type="pink" class="btn-block btn-xs"}}EXTRA SMALL{{/absb-button}}
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                      {{#absb-button type="cyan" class="btn-block btn-lg"}}LARGE{{/absb-button}}
+                      {{#absb-button type="cyan" class="btn-block"}}DEFAULT{{/absb-button}}
+                      {{#absb-button type="cyan" class="btn-block btn-sm"}}SMALL{{/absb-button}}
+                      {{#absb-button type="cyan" class="btn-block btn-xs"}}EXTRA SMALL{{/absb-button}}
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                      {{#absb-button type="teal" class="btn-block btn-lg"}}LARGE{{/absb-button}}
+                      {{#absb-button type="teal" class="btn-block"}}DEFAULT{{/absb-button}}
+                      {{#absb-button type="teal" class="btn-block btn-sm"}}SMALL{{/absb-button}}
+                      {{#absb-button type="teal" class="btn-block btn-xs"}}EXTRA SMALL{{/absb-button}}
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                      {{#absb-button type="orange" class="btn-block btn-lg"}}LARGE{{/absb-button}}
+                      {{#absb-button type="orange" class="btn-block"}}DEFAULT{{/absb-button}}
+                      {{#absb-button type="orange" class="btn-block btn-sm"}}SMALL{{/absb-button}}
+                      {{#absb-button type="orange" class="btn-block btn-xs"}}EXTRA SMALL{{/absb-button}}
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                      {{#absb-button type="purple" class="btn-block btn-lg"}}LARGE{{/absb-button}}
+                      {{#absb-button type="purple" class="btn-block"}}DEFAULT{{/absb-button}}
+                      {{#absb-button type="purple" class="btn-block btn-sm"}}SMALL{{/absb-button}}
+                      {{#absb-button type="purple" class="btn-block btn-xs"}}EXTRA SMALL{{/absb-button}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #END# Button Sizes -->
+<!-- Block Buttons -->
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    BLOCK BUTTONS
+                    <small>Create block level buttons</small>
+                </h2>
+                {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                   {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                   {{#dd.menu class="pull-right" as |ddm|}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                     {{/dd.menu}}
+                 {{/bs-dropdown}}
+            </div>
+            <div class="body">
+                <div class="demo-button">
+                    {{#absb-button type="default" class="btn-block btn-lg"}}DEFAULT{{/absb-button}}
+                    {{#absb-button type="primary" class="btn-block btn-lg"}}PRIMARY{{/absb-button}}
+                    {{#absb-button type="success" class="btn-block btn-lg"}}SUCCESS{{/absb-button}}
+                    {{#absb-button type="info" class="btn-block btn-lg"}}INFO{{/absb-button}}
+                    {{#absb-button type="warning" class="btn-block btn-lg"}}WARNING{{/absb-button}}
+                    {{#absb-button type="danger" class="btn-block btn-lg"}}DANGER{{/absb-button}}
+                    {{#absb-button type="red" class="btn-block btn-lg"}}RED{{/absb-button}}
+                    {{#absb-button type="pink" class="btn-block btn-lg"}}PINK{{/absb-button}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #END# Block Buttons -->
+<!-- Disabled Buttons -->
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    DISABLED BUTTONS
+                    <small>Make buttons look unclickable by fading them back with opacity</small>
+                </h2>
+                {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                   {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                   {{#dd.menu class="pull-right" as |ddm|}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                     {{/dd.menu}}
+                 {{/bs-dropdown}}
+            </div>
+            <div class="body">
+                <div class="button-demo">
+                    {{#absb-button type="default" disabled=true}}DEFAULT{{/absb-button}}
+                    {{#absb-button type="primary" disabled=true}}PRIMARY{{/absb-button}}
+                    {{#absb-button type="success" disabled=true}}SUCCESS{{/absb-button}}
+                    {{#absb-button type="info" disabled=true}}INFO{{/absb-button}}
+                    {{#absb-button type="warning" disabled=true}}WARNING{{/absb-button}}
+                    {{#absb-button type="danger" disabled=true}}DANGER{{/absb-button}}
+                    {{#absb-button type="red" disabled=true}}RED{{/absb-button}}
+                    {{#absb-button type="pink" disabled=true}}PINK{{/absb-button}}
+                    {{#absb-button type="purple" disabled=true}}PURPLE{{/absb-button}}
+                    {{#absb-button type="deep-purple" disabled=true}}DEEP PURPLE{{/absb-button}}
+                    {{#absb-button type="indigo" disabled=true}}INDIGO{{/absb-button}}
+                    {{#absb-button type="blue" disabled=true}}BLUE{{/absb-button}}
+                    {{#absb-button type="light-blue" disabled=true}}LIGHT BLUE{{/absb-button}}
+                    {{#absb-button type="cyan" disabled=true}}CYAN{{/absb-button}}
+                    {{#absb-button type="teal" disabled=true}}TEAL{{/absb-button}}
+                    {{#absb-button type="green" disabled=true}}GREEN{{/absb-button}}
+                    {{#absb-button type="light-green" disabled=true}}LIGHT GREEN{{/absb-button}}
+                    {{#absb-button type="lime" disabled=true}}LIME{{/absb-button}}
+                    {{#absb-button type="yellow" disabled=true}}YELLOW{{/absb-button}}
+                    {{#absb-button type="amber" disabled=true}}AMBER{{/absb-button}}
+                    {{#absb-button type="orange" disabled=true}}ORANGE{{/absb-button}}
+                    {{#absb-button type="deep-orange" disabled=true}}DEEP ORANGE{{/absb-button}}
+                    {{#absb-button type="brown" disabled=true}}BROWN{{/absb-button}}
+                    {{#absb-button type="grey" disabled=true}}GREY{{/absb-button}}
+                    {{#absb-button type="blue-grey" disabled=true}}BLUE GREY{{/absb-button}}
+                    {{#absb-button type="black" class="waves-light" disabled=true}}BLACK{{/absb-button}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #END# Disabled Buttons -->
+<!-- Icon Buttons -->
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    ICON BUTTONS
+                    <small>Make icon buttons</small>
+                </h2>
+                {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                   {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                   {{#dd.menu class="pull-right" as |ddm|}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                     {{/dd.menu}}
+                 {{/bs-dropdown}}
+            </div>
+            <div class="body">
+                <div class="icon-button-demo">
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">extension</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">home</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">lock</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">perm_scan_wifi</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">flight_takeoff</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">print</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">report_problem</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">search</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">settings</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">trending_up</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">verified_user</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">mic</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">call_missed_outgoing</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">forum</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">email</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">chat</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">vpn_key</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">content_cut</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">drafts</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">save</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">weekend</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">access_alarm</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">location_searching</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">merge_type</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default"}}
+                        <i class="material-icons">publish</i>
+                    {{/absb-button}}
+                </div>
+                <div class="icon-button-demo">
+                  {{#absb-button type="primary"}}
+                      <i class="material-icons">extension</i>
+                  {{/absb-button}}
+                  {{#absb-button type="success"}}
+                      <i class="material-icons">home</i>
+                  {{/absb-button}}
+                  {{#absb-button type="info"}}
+                      <i class="material-icons">lock</i>
+                  {{/absb-button}}
+                  {{#absb-button type="warning"}}
+                      <i class="material-icons">perm_scan_wifi</i>
+                  {{/absb-button}}
+                  {{#absb-button type="danger"}}
+                      <i class="material-icons">flight_takeoff</i>
+                  {{/absb-button}}
+                  {{#absb-button type="red"}}
+                      <i class="material-icons">print</i>
+                  {{/absb-button}}
+                  {{#absb-button type="pink"}}
+                      <i class="material-icons">report_problem</i>
+                  {{/absb-button}}
+                  {{#absb-button type="purple"}}
+                      <i class="material-icons">search</i>
+                  {{/absb-button}}
+                  {{#absb-button type="deep-purple"}}
+                      <i class="material-icons">settings</i>
+                  {{/absb-button}}
+                  {{#absb-button type="indigo"}}
+                      <i class="material-icons">trending_up</i>
+                  {{/absb-button}}
+                  {{#absb-button type="blue"}}
+                      <i class="material-icons">verified_user</i>
+                  {{/absb-button}}
+                  {{#absb-button type="light-blue"}}
+                      <i class="material-icons">mic</i>
+                  {{/absb-button}}
+                  {{#absb-button type="cyan"}}
+                      <i class="material-icons">call_missed_outgoing</i>
+                  {{/absb-button}}
+                  {{#absb-button type="teal"}}
+                      <i class="material-icons">forum</i>
+                  {{/absb-button}}
+                  {{#absb-button type="green"}}
+                      <i class="material-icons">email</i>
+                  {{/absb-button}}
+                  {{#absb-button type="light-green"}}
+                      <i class="material-icons">chat</i>
+                  {{/absb-button}}
+                  {{#absb-button type="lime"}}
+                      <i class="material-icons">vpn_key</i>
+                  {{/absb-button}}
+                  {{#absb-button type="yellow"}}
+                      <i class="material-icons">content_cut</i>
+                  {{/absb-button}}
+                  {{#absb-button type="amber"}}
+                      <i class="material-icons">drafts</i>
+                  {{/absb-button}}
+                  {{#absb-button type="orange"}}
+                      <i class="material-icons">save</i>
+                  {{/absb-button}}
+                  {{#absb-button type="deep-orange"}}
+                      <i class="material-icons">weekend</i>
+                  {{/absb-button}}
+                  {{#absb-button type="brown"}}
+                      <i class="material-icons">access_alarm</i>
+                  {{/absb-button}}
+                  {{#absb-button type="grey"}}
+                      <i class="material-icons">location_searching</i>
+                  {{/absb-button}}
+                  {{#absb-button type="blue-grey"}}
+                      <i class="material-icons">merge_type</i>
+                  {{/absb-button}}
+                  {{#absb-button type="black" class="waves-light"}}
+                      <i class="material-icons">publish</i>
+                  {{/absb-button}}
+                </div>
+                <div class="icon-button-demo m-t-25">
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">extension</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">home</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">lock</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">perm_scan_wifi</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">flight_takeoff</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">print</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">report_problem</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">search</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">settings</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">trending_up</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">verified_user</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">mic</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">call_missed_outgoing</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">forum</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">email</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">chat</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">vpn_key</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">content_cut</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">drafts</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">save</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">weekend</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">access_alarm</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">location_searching</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">merge_type</i>
+                    {{/absb-button}}
+                    {{#absb-button type="default" class="btn-circle waves-circle waves-float"}}
+                        <i class="material-icons">publish</i>
+                    {{/absb-button}}
+                </div>
+                <div class="icon-button-demo">
+                  {{#absb-button type="primary" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">extension</i>
+                  {{/absb-button}}
+                  {{#absb-button type="success" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">home</i>
+                  {{/absb-button}}
+                  {{#absb-button type="info" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">lock</i>
+                  {{/absb-button}}
+                  {{#absb-button type="warning" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">perm_scan_wifi</i>
+                  {{/absb-button}}
+                  {{#absb-button type="danger" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">flight_takeoff</i>
+                  {{/absb-button}}
+                  {{#absb-button type="red" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">print</i>
+                  {{/absb-button}}
+                  {{#absb-button type="pink" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">report_problem</i>
+                  {{/absb-button}}
+                  {{#absb-button type="purple" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">search</i>
+                  {{/absb-button}}
+                  {{#absb-button type="deep-purple" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">settings</i>
+                  {{/absb-button}}
+                  {{#absb-button type="indigo" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">trending_up</i>
+                  {{/absb-button}}
+                  {{#absb-button type="blue" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">verified_user</i>
+                  {{/absb-button}}
+                  {{#absb-button type="light-blue" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">mic</i>
+                  {{/absb-button}}
+                  {{#absb-button type="cyan" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">call_missed_outgoing</i>
+                  {{/absb-button}}
+                  {{#absb-button type="teal" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">forum</i>
+                  {{/absb-button}}
+                  {{#absb-button type="green" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">email</i>
+                  {{/absb-button}}
+                  {{#absb-button type="light-green" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">chat</i>
+                  {{/absb-button}}
+                  {{#absb-button type="lime" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">vpn_key</i>
+                  {{/absb-button}}
+                  {{#absb-button type="yellow" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">content_cut</i>
+                  {{/absb-button}}
+                  {{#absb-button type="amber" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">drafts</i>
+                  {{/absb-button}}
+                  {{#absb-button type="orange" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">save</i>
+                  {{/absb-button}}
+                  {{#absb-button type="deep-orange" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">weekend</i>
+                  {{/absb-button}}
+                  {{#absb-button type="brown" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">access_alarm</i>
+                  {{/absb-button}}
+                  {{#absb-button type="grey" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">location_searching</i>
+                  {{/absb-button}}
+                  {{#absb-button type="blue-grey" class="btn-circle waves-circle waves-float"}}
+                      <i class="material-icons">merge_type</i>
+                  {{/absb-button}}
+                  {{#absb-button type="black" class="btn-circle waves-circle waves-float waves-light"}}
+                      <i class="material-icons">publish</i>
+                  {{/absb-button}}
+                </div>
+                <h2 class="card-inside-title">
+                    Large Circle
+                </h2>
+                <div class="icon-button-demo m-t-25">
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">extension</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">home</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">lock</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">perm_scan_wifi</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">flight_takeoff</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">print</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">report_problem</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">search</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">settings</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">trending_up</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">verified_user</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">mic</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">call_missed_outgoing</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">forum</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">email</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">chat</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">vpn_key</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">content_cut</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">drafts</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">save</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">weekend</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">access_alarm</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">location_searching</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">merge_type</i>
+                  {{/absb-button}}
+                  {{#absb-button type="default" class="btn-circle-lg waves-circle waves-float"}}
+                      <i class="material-icons">publish</i>
+                  {{/absb-button}}
+                </div>
+                <div class="icon-button-demo">
+                  {{#absb-button type="primary" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">extension</i>
+                {{/absb-button}}
+                {{#absb-button type="success" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">home</i>
+                {{/absb-button}}
+                {{#absb-button type="info" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">lock</i>
+                {{/absb-button}}
+                {{#absb-button type="warning" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">perm_scan_wifi</i>
+                {{/absb-button}}
+                {{#absb-button type="danger" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">flight_takeoff</i>
+                {{/absb-button}}
+                {{#absb-button type="red" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">print</i>
+                {{/absb-button}}
+                {{#absb-button type="pink" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">report_problem</i>
+                {{/absb-button}}
+                {{#absb-button type="purple" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">search</i>
+                {{/absb-button}}
+                {{#absb-button type="deep-purple" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">settings</i>
+                {{/absb-button}}
+                {{#absb-button type="indigo" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">trending_up</i>
+                {{/absb-button}}
+                {{#absb-button type="blue" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">verified_user</i>
+                {{/absb-button}}
+                {{#absb-button type="light-blue" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">mic</i>
+                {{/absb-button}}
+                {{#absb-button type="cyan" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">call_missed_outgoing</i>
+                {{/absb-button}}
+                {{#absb-button type="teal" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">forum</i>
+                {{/absb-button}}
+                {{#absb-button type="green" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">email</i>
+                {{/absb-button}}
+                {{#absb-button type="light-green" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">chat</i>
+                {{/absb-button}}
+                {{#absb-button type="lime" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">vpn_key</i>
+                {{/absb-button}}
+                {{#absb-button type="yellow" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">content_cut</i>
+                {{/absb-button}}
+                {{#absb-button type="amber" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">drafts</i>
+                {{/absb-button}}
+                {{#absb-button type="orange" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">save</i>
+                {{/absb-button}}
+                {{#absb-button type="deep-orange" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">weekend</i>
+                {{/absb-button}}
+                {{#absb-button type="brown" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">access_alarm</i>
+                {{/absb-button}}
+                {{#absb-button type="grey" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">location_searching</i>
+                {{/absb-button}}
+                {{#absb-button type="blue-grey" class="btn-circle-lg waves-circle waves-float"}}
+                    <i class="material-icons">merge_type</i>
+                {{/absb-button}}
+                {{#absb-button type="black" class="btn-circle-lg waves-circle waves-float waves-light"}}
+                    <i class="material-icons">publish</i>
+                {{/absb-button}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #END# Icon Buttons -->
+<!-- Icon & Text Buttons -->
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    ICON &amp; TEXT BUTTONS
+                    <small>Make icon &amp; text buttons</small>
+                </h2>
+                {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                   {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                   {{#dd.menu class="pull-right" as |ddm|}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                     {{/dd.menu}}
+                 {{/bs-dropdown}}
+            </div>
+            <div class="body">
+                <div class="icon-and-text-button-demo">
+                    {{#absb-button type="primary"}}
+                        <i class="material-icons">extension</i>
+                        <span>EXTENSION</span>
+                    {{/absb-button}}
+                    {{#absb-button type="success"}}
+                        <i class="material-icons">home</i>
+                        <span>HOME</span>
+                    {{/absb-button}}
+                    {{#absb-button type="info"}}
+                        <i class="material-icons">lock</i>
+                        <span>LOCK</span>
+                    {{/absb-button}}
+                    {{#absb-button type="warning"}}
+                        <i class="material-icons">perm_scan_wifi</i>
+                        <span>SCAN WIFI</span>
+                    {{/absb-button}}
+                    {{#absb-button type="danger"}}
+                        <i class="material-icons">flight_takeoff</i>
+                        <span>TAKE OFF</span>
+                    {{/absb-button}}
+                    {{#absb-button type="red"}}
+                        <i class="material-icons">print</i>
+                        <span>PRINT...</span>
+                    {{/absb-button}}
+                    {{#absb-button type="pink"}}
+                        <i class="material-icons">report_problem</i>
+                        <span>REPORT ISSUE</span>
+                    {{/absb-button}}
+                    {{#absb-button type="purple"}}
+                        <i class="material-icons">search</i>
+                        <span>SEARCH</span>
+                    {{/absb-button}}
+                    {{#absb-button type="deep-purple"}}
+                        <i class="material-icons">settings</i>
+                        <span>SETTINGS</span>
+                    {{/absb-button}}
+                    {{#absb-button type="indigo"}}
+                        <i class="material-icons">trending_up</i>
+                        <span>TRENDING UP</span>
+                    {{/absb-button}}
+                    {{#absb-button type="blue"}}
+                        <i class="material-icons">verified_user</i>
+                        <span>VERIFIED USER</span>
+                    {{/absb-button}}
+                    {{#absb-button type="light-blue"}}
+                        <i class="material-icons">mic</i>
+                        <span>MIC</span>
+                    {{/absb-button}}
+                    {{#absb-button type="teal"}}
+                        <i class="material-icons">forum</i>
+                        <span>FORUM</span>
+                    {{/absb-button}}
+                    {{#absb-button type="green"}}
+                        <i class="material-icons">email</i>
+                        <span>EMAIL</span>
+                    {{/absb-button}}
+                    {{#absb-button type="light-green"}}
+                        <i class="material-icons">chat</i>
+                        <span>CHAT</span>
+                    {{/absb-button}}
+                    {{#absb-button type="lime"}}
+                        <i class="material-icons">vpn_key</i>
+                        <span>VPN KEY</span>
+                    {{/absb-button}}
+                    {{#absb-button type="amber"}}
+                        <i class="material-icons">drafts</i>
+                        <span>DRAFTS</span>
+                    {{/absb-button}}
+                    {{#absb-button type="orange"}}
+                        <i class="material-icons">save</i>
+                        <span>SAVE</span>
+                    {{/absb-button}}
+                    {{#absb-button type="deep-orange"}}
+                        <i class="material-icons">weekend</i>
+                        <span>WEEKEND</span>
+                    {{/absb-button}}
+                    {{#absb-button type="brown"}}
+                        <i class="material-icons">access_alarm</i>
+                        <span>ALARM</span>
+                    {{/absb-button}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #END# Icon & Text Buttons -->
+<!-- Button Groups -->
+<div class="block-header">
+    <h2>
+        BUTTON GROUPS
+        <small>Group a series of buttons together on a single line with the button group</small>
+    </h2>
+</div>
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    BASIC EXAMPLE
+                    <small>Wrap a series of buttons with <code>.btn</code> in <code>.btn-group</code>.</small>
+                </h2>
+                {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                   {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                   {{#dd.menu class="pull-right" as |ddm|}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                     {{/dd.menu}}
+                 {{/bs-dropdown}}
+            </div>
+            <div class="body">
+                <div class="demo-button-groups">
+                    <div class="btn-group" role="group">
+                        {{#absb-button type="default"}}LEFT{{/absb-button}}
+                        {{#absb-button type="default"}}MIDDLE{{/absb-button}}
+                        {{#absb-button type="default"}}RIGHT{{/absb-button}}
+                    </div>
+                    <div class="btn-group" role="group">
+                      {{#absb-button type="primary"}}LEFT{{/absb-button}}
+                      {{#absb-button type="primary"}}MIDDLE{{/absb-button}}
+                      {{#absb-button type="primary"}}RIGHT{{/absb-button}}
+                    </div>
+                    <div class="btn-group" role="group">
+                      {{#absb-button type="success"}}LEFT{{/absb-button}}
+                      {{#absb-button type="success"}}MIDDLE{{/absb-button}}
+                      {{#absb-button type="success"}}RIGHT{{/absb-button}}
+                    </div>
+                    <div class="btn-group" role="group">
+                      {{#absb-button type="info"}}LEFT{{/absb-button}}
+                      {{#absb-button type="info"}}MIDDLE{{/absb-button}}
+                      {{#absb-button type="info"}}RIGHT{{/absb-button}}
+                    </div>
+                    <div class="btn-group" role="group">
+                      {{#absb-button type="warning"}}LEFT{{/absb-button}}
+                      {{#absb-button type="warning"}}MIDDLE{{/absb-button}}
+                      {{#absb-button type="warning"}}RIGHT{{/absb-button}}
+                    </div>
+                    <div class="btn-group" role="group">
+                      {{#absb-button type="danger"}}LEFT{{/absb-button}}
+                      {{#absb-button type="danger"}}MIDDLE{{/absb-button}}
+                      {{#absb-button type="danger"}}RIGHT{{/absb-button}}
+                    </div>
+                </div>
+
+                <h2 class="card-inside-title">
+                    With Material Design Colors
+                    <small>You can use material design colors which examples are <code>.bg-pink</code> class</small>
+                </h2>
+                <div class="demo-button-groups">
+                    <div class="btn-group" role="group">
+                      {{#absb-button type="pink" class="waves-light"}}LEFT{{/absb-button}}
+                      {{#absb-button type="pink" class="waves-light"}}MIDDLE{{/absb-button}}
+                      {{#absb-button type="pink" class="waves-light"}}RIGHT{{/absb-button}}
+                    </div>
+                    <div class="btn-group" role="group">
+                      {{#absb-button type="cyan"}}LEFT{{/absb-button}}
+                      {{#absb-button type="cyan"}}MIDDLE{{/absb-button}}
+                      {{#absb-button type="cyan"}}RIGHT{{/absb-button}}
+                    </div>
+                    <div class="btn-group" role="group">
+                      {{#absb-button type="teal"}}LEFT{{/absb-button}}
+                      {{#absb-button type="teal"}}MIDDLE{{/absb-button}}
+                      {{#absb-button type="teal"}}RIGHT{{/absb-button}}
+                    </div>
+                    <div class="btn-group" role="group">
+                      {{#absb-button type="orange"}}LEFT{{/absb-button}}
+                      {{#absb-button type="orange"}}MIDDLE{{/absb-button}}
+                      {{#absb-button type="orange"}}RIGHT{{/absb-button}}
+                    </div>
+                    <div class="btn-group" role="group">
+                      {{#absb-button type="purple" class="waves-light"}}LEFT{{/absb-button}}
+                      {{#absb-button type="purple" class="waves-light"}}MIDDLE{{/absb-button}}
+                      {{#absb-button type="purple" class="waves-light"}}RIGHT{{/absb-button}}
+                    </div>
+                    <div class="btn-group" role="group">
+                      {{#absb-button type="blue-grey"}}LEFT{{/absb-button}}
+                      {{#absb-button type="blue-grey"}}MIDDLE{{/absb-button}}
+                      {{#absb-button type="blue-grey"}}RIGHT{{/absb-button}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    BUTTON TOOLBAR
+                    <small>Combine sets of <code>&lt;div class="btn-group"&gt;</code> into a <code>&lt;div class="btn-toolbar"&gt;</code> for more complex components.</small>
+                </h2>
+                {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                   {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                   {{#dd.menu class="pull-right" as |ddm|}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                     {{/dd.menu}}
+                 {{/bs-dropdown}}
+            </div>
+            <div class="body">
+                <div class="demo-button-toolbar clearfix">
+                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-group" role="group" aria-label="First group">
+                          {{#absb-button type="default"}}1{{/absb-button}}
+                          {{#absb-button type="default"}}2{{/absb-button}}
+                          {{#absb-button type="default"}}3{{/absb-button}}
+                          {{#absb-button type="default"}}4{{/absb-button}}
+                        </div>
+                        <div class="btn-group" role="group" aria-label="Second group">
+                          {{#absb-button type="default"}}5{{/absb-button}}
+                          {{#absb-button type="default"}}6{{/absb-button}}
+                          {{#absb-button type="default"}}7{{/absb-button}}
+                        </div>
+                        <div class="btn-group" role="group" aria-label="Third group">
+                          {{#absb-button type="default"}}8{{/absb-button}}
+                        </div>
+                    </div>
+
+                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                      <div class="btn-group" role="group" aria-label="First group">
+                        {{#absb-button type="primary"}}1{{/absb-button}}
+                        {{#absb-button type="primary"}}2{{/absb-button}}
+                        {{#absb-button type="primary"}}3{{/absb-button}}
+                        {{#absb-button type="primary"}}4{{/absb-button}}
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Second group">
+                        {{#absb-button type="primary"}}5{{/absb-button}}
+                        {{#absb-button type="primary"}}6{{/absb-button}}
+                        {{#absb-button type="primary"}}7{{/absb-button}}
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        {{#absb-button type="primary"}}8{{/absb-button}}
+                      </div>
+                    </div>
+
+                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                      <div class="btn-group" role="group" aria-label="First group">
+                        {{#absb-button type="success"}}1{{/absb-button}}
+                        {{#absb-button type="success"}}2{{/absb-button}}
+                        {{#absb-button type="success"}}3{{/absb-button}}
+                        {{#absb-button type="success"}}4{{/absb-button}}
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Second group">
+                        {{#absb-button type="success"}}5{{/absb-button}}
+                        {{#absb-button type="success"}}6{{/absb-button}}
+                        {{#absb-button type="success"}}7{{/absb-button}}
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        {{#absb-button type="success"}}8{{/absb-button}}
+                      </div>
+                    </div>
+
+                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                      <div class="btn-group" role="group" aria-label="First group">
+                        {{#absb-button type="info"}}1{{/absb-button}}
+                        {{#absb-button type="info"}}2{{/absb-button}}
+                        {{#absb-button type="info"}}3{{/absb-button}}
+                        {{#absb-button type="info"}}4{{/absb-button}}
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Second group">
+                        {{#absb-button type="info"}}5{{/absb-button}}
+                        {{#absb-button type="info"}}6{{/absb-button}}
+                        {{#absb-button type="info"}}7{{/absb-button}}
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        {{#absb-button type="info"}}8{{/absb-button}}
+                      </div>
+                    </div>
+
+                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                      <div class="btn-group" role="group" aria-label="First group">
+                        {{#absb-button type="warning"}}1{{/absb-button}}
+                        {{#absb-button type="warning"}}2{{/absb-button}}
+                        {{#absb-button type="warning"}}3{{/absb-button}}
+                        {{#absb-button type="warning"}}4{{/absb-button}}
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Second group">
+                        {{#absb-button type="warning"}}5{{/absb-button}}
+                        {{#absb-button type="warning"}}6{{/absb-button}}
+                        {{#absb-button type="warning"}}7{{/absb-button}}
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        {{#absb-button type="warning"}}8{{/absb-button}}
+                      </div>
+                    </div>
+                </div>
+
+                <h2 class="card-inside-title">
+                    With Material Design Colors
+                    <small>You can use material design colors which examples are <code>.bg-pink</code> class</small>
+                </h2>
+                <div class="demo-button-toolbar clearfix">
+                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                      <div class="btn-group" role="group" aria-label="First group">
+                        {{#absb-button type="pink"}}1{{/absb-button}}
+                        {{#absb-button type="pink"}}2{{/absb-button}}
+                        {{#absb-button type="pink"}}3{{/absb-button}}
+                        {{#absb-button type="pink"}}4{{/absb-button}}
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Second group">
+                        {{#absb-button type="pink"}}5{{/absb-button}}
+                        {{#absb-button type="pink"}}6{{/absb-button}}
+                        {{#absb-button type="pink"}}7{{/absb-button}}
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        {{#absb-button type="pink"}}8{{/absb-button}}
+                      </div>
+                    </div>
+                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                      <div class="btn-group" role="group" aria-label="First group">
+                        {{#absb-button type="cyan"}}1{{/absb-button}}
+                        {{#absb-button type="cyan"}}2{{/absb-button}}
+                        {{#absb-button type="cyan"}}3{{/absb-button}}
+                        {{#absb-button type="cyan"}}4{{/absb-button}}
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Second group">
+                        {{#absb-button type="cyan"}}5{{/absb-button}}
+                        {{#absb-button type="cyan"}}6{{/absb-button}}
+                        {{#absb-button type="cyan"}}7{{/absb-button}}
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        {{#absb-button type="cyan"}}8{{/absb-button}}
+                      </div>
+                    </div>
+                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                      <div class="btn-group" role="group" aria-label="First group">
+                        {{#absb-button type="teal"}}1{{/absb-button}}
+                        {{#absb-button type="teal"}}2{{/absb-button}}
+                        {{#absb-button type="teal"}}3{{/absb-button}}
+                        {{#absb-button type="teal"}}4{{/absb-button}}
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Second group">
+                        {{#absb-button type="teal"}}5{{/absb-button}}
+                        {{#absb-button type="teal"}}6{{/absb-button}}
+                        {{#absb-button type="teal"}}7{{/absb-button}}
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        {{#absb-button type="teal"}}8{{/absb-button}}
+                      </div>
+                    </div>
+                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                      <div class="btn-group" role="group" aria-label="First group">
+                        {{#absb-button type="orange"}}1{{/absb-button}}
+                        {{#absb-button type="orange"}}2{{/absb-button}}
+                        {{#absb-button type="orange"}}3{{/absb-button}}
+                        {{#absb-button type="orange"}}4{{/absb-button}}
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Second group">
+                        {{#absb-button type="orange"}}5{{/absb-button}}
+                        {{#absb-button type="orange"}}6{{/absb-button}}
+                        {{#absb-button type="orange"}}7{{/absb-button}}
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        {{#absb-button type="orange"}}8{{/absb-button}}
+                      </div>
+                    </div>
+                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                      <div class="btn-group" role="group" aria-label="First group">
+                        {{#absb-button type="purple"}}1{{/absb-button}}
+                        {{#absb-button type="purple"}}2{{/absb-button}}
+                        {{#absb-button type="purple"}}3{{/absb-button}}
+                        {{#absb-button type="purple"}}4{{/absb-button}}
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Second group">
+                        {{#absb-button type="purple"}}5{{/absb-button}}
+                        {{#absb-button type="purple"}}6{{/absb-button}}
+                        {{#absb-button type="purple"}}7{{/absb-button}}
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        {{#absb-button type="purple"}}8{{/absb-button}}
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    SIZING
+                    <small>Instead of applying button sizing classes to every button in a group, just add <code>.btn-group-*</code> to each <code>.btn-group</code>, including when nesting multiple groups.</small>
+                </h2>
+                {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                   {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                   {{#dd.menu class="pull-right" as |ddm|}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                     {{/dd.menu}}
+                 {{/bs-dropdown}}
+            </div>
+            <div class="body">
+                <div class="row clearfix">
+                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 align-center">
+                        <p><b>Large Button Group</b></p>
+                        <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+                          {{#absb-button type="pink" class="waves-light"}}LEFT{{/absb-button}}
+                          {{#absb-button type="pink" class="waves-light"}}MIDDLE{{/absb-button}}
+                          {{#absb-button type="pink" class="waves-light"}}RIGHT{{/absb-button}}
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 align-center">
+                        <p><b>Default Button Group</b></p>
+                        <div class="btn-group" role="group" aria-label="Default button group">
+                          {{#absb-button type="pink" class="waves-light"}}LEFT{{/absb-button}}
+                          {{#absb-button type="pink" class="waves-light"}}MIDDLE{{/absb-button}}
+                          {{#absb-button type="pink" class="waves-light"}}RIGHT{{/absb-button}}
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 align-center">
+                        <p><b>Small Button Group</b></p>
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+                          {{#absb-button type="pink" class="waves-light"}}LEFT{{/absb-button}}
+                          {{#absb-button type="pink" class="waves-light"}}MIDDLE{{/absb-button}}
+                          {{#absb-button type="pink" class="waves-light"}}RIGHT{{/absb-button}}
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 align-center">
+                        <p><b>Extra-Small Button Group</b></p>
+                        <div class="btn-group btn-group-xs" role="group" aria-label="Extra-small button group">
+                              {{#absb-button type="pink" class="waves-light"}}LEFT{{/absb-button}}
+                              {{#absb-button type="pink" class="waves-light"}}MIDDLE{{/absb-button}}
+                              {{#absb-button type="pink" class="waves-light"}}RIGHT{{/absb-button}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    NESTING
+                    <small>Place a <code>.btn-group</code> within another <code>.btn-group</code> when you want dropdown menus mixed with a series of buttons.</small>
+                </h2>
+                {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                   {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                   {{#dd.menu class="pull-right" as |ddm|}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                     {{/dd.menu}}
+                 {{/bs-dropdown}}
+            </div>
+            <div class="body">
+                <div class="demo-button-nesting">
+                    <div class="btn-group" role="group">
+                      {{#absb-button type="default"}}1{{/absb-button}}
+                      {{#absb-button type="default"}}2{{/absb-button}}
+
+                      {{#bs-dropdown as |dd| }}
+                         {{#dd.button type="default"}}
+                            Dropdown
+                           <span class="caret"></span>
+                         {{/dd.button}}
+                         {{#dd.menu as |ddm|}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                           {{/dd.menu}}
+                       {{/bs-dropdown}}
+                    </div>
+                    <div class="btn-group" role="group">
+                      {{#absb-button type="primary"}}1{{/absb-button}}
+                      {{#absb-button type="primary"}}2{{/absb-button}}
+
+                      {{#bs-dropdown as |dd| }}
+                         {{#dd.button type="primary"}}
+                            Dropdown
+                           <span class="caret"></span>
+                         {{/dd.button}}
+                         {{#dd.menu as |ddm|}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                           {{/dd.menu}}
+                       {{/bs-dropdown}}
+                    </div>
+                    <div class="btn-group" role="group">
+                      {{#absb-button type="success"}}1{{/absb-button}}
+                      {{#absb-button type="success"}}2{{/absb-button}}
+                      {{#bs-dropdown as |dd| }}
+                         {{#dd.button type="success"}}
+                            Dropdown
+                           <span class="caret"></span>
+                         {{/dd.button}}
+                         {{#dd.menu as |ddm|}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                           {{/dd.menu}}
+                       {{/bs-dropdown}}
+                    </div>
+                    <div class="btn-group" role="group">
+                      {{#absb-button type="info"}}1{{/absb-button}}
+                      {{#absb-button type="info"}}2{{/absb-button}}
+                      {{#bs-dropdown as |dd| }}
+                         {{#dd.button type="info"}}
+                            Dropdown
+                           <span class="caret"></span>
+                         {{/dd.button}}
+                         {{#dd.menu as |ddm|}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                           {{/dd.menu}}
+                       {{/bs-dropdown}}
+                    </div>
+                    <div class="btn-group" role="group">
+                      {{#absb-button type="warning"}}1{{/absb-button}}
+                      {{#absb-button type="warning"}}2{{/absb-button}}
+                      {{#bs-dropdown as |dd| }}
+                         {{#dd.button type="warning"}}
+                            Dropdown
+                           <span class="caret"></span>
+                         {{/dd.button}}
+                         {{#dd.menu as |ddm|}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                           {{/dd.menu}}
+                       {{/bs-dropdown}}
+                    </div>
+                    <div class="btn-group" role="group">
+                      {{#absb-button type="danger"}}1{{/absb-button}}
+                      {{#absb-button type="danger"}}2{{/absb-button}}
+                      {{#bs-dropdown as |dd| }}
+                         {{#dd.button type="danger"}}
+                            Dropdown
+                           <span class="caret"></span>
+                         {{/dd.button}}
+                         {{#dd.menu as |ddm|}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                           {{/dd.menu}}
+                       {{/bs-dropdown}}
+                    </div>
+                </div>
+
+                <h2 class="card-inside-title">
+                    With Material Design Colors
+                    <small>You can use material design colors which examples are <code>.bg-pink</code> class</small>
+                </h2>
+                <div class="demo-button-nesting">
+                    <div class="btn-group" role="group">
+                      {{#absb-button type="pink"}}1{{/absb-button}}
+                      {{#absb-button type="pink"}}2{{/absb-button}}
+                      {{#bs-dropdown as |dd| }}
+                         {{#dd.button type="none" class="bg-pink"}}
+                            Dropdown
+                           <span class="caret"></span>
+                         {{/dd.button}}
+                         {{#dd.menu as |ddm|}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                           {{/dd.menu}}
+                       {{/bs-dropdown}}
+                    </div>
+                    <div class="btn-group" role="group">
+                      {{#absb-button type="cyan"}}1{{/absb-button}}
+                      {{#absb-button type="cyan"}}2{{/absb-button}}
+                      {{#bs-dropdown as |dd| }}
+                         {{#dd.button type="none" class="bg-cyan"}}
+                            Dropdown
+                           <span class="caret"></span>
+                         {{/dd.button}}
+                         {{#dd.menu as |ddm|}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                           {{/dd.menu}}
+                       {{/bs-dropdown}}
+                    </div>
+                    <div class="btn-group" role="group">
+                      {{#absb-button type="teal"}}1{{/absb-button}}
+                      {{#absb-button type="teal"}}2{{/absb-button}}
+                      {{#bs-dropdown as |dd| }}
+                         {{#dd.button type="none" class="bg-teal"}}
+                            Dropdown
+                           <span class="caret"></span>
+                         {{/dd.button}}
+                         {{#dd.menu as |ddm|}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                           {{/dd.menu}}
+                       {{/bs-dropdown}}
+                    </div>
+                    <div class="btn-group" role="group">
+                      {{#absb-button type="orange"}}1{{/absb-button}}
+                      {{#absb-button type="orange"}}2{{/absb-button}}
+                      {{#bs-dropdown as |dd| }}
+                         {{#dd.button type="none" class="bg-orange"}}
+                            Dropdown
+                           <span class="caret"></span>
+                         {{/dd.button}}
+                         {{#dd.menu as |ddm|}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                           {{/dd.menu}}
+                       {{/bs-dropdown}}
+                    </div>
+                    <div class="btn-group" role="group">
+                      {{#absb-button type="purple"}}1{{/absb-button}}
+                      {{#absb-button type="purple"}}2{{/absb-button}}
+                      {{#bs-dropdown as |dd| }}
+                         {{#dd.button type="none" class="bg-purple"}}
+                            Dropdown
+                           <span class="caret"></span>
+                         {{/dd.button}}
+                         {{#dd.menu as |ddm|}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                           {{/dd.menu}}
+                       {{/bs-dropdown}}
+                    </div>
+                    <div class="btn-group" role="group">
+                      {{#absb-button type="blue-grey"}}1{{/absb-button}}
+                      {{#absb-button type="blue-grey"}}2{{/absb-button}}
+                      {{#bs-dropdown as |dd| }}
+                         {{#dd.button type="none" class="bg-blue-grey"}}
+                            Dropdown
+                           <span class="caret"></span>
+                         {{/dd.button}}
+                         {{#dd.menu as |ddm|}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                           {{/dd.menu}}
+                       {{/bs-dropdown}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    VERTICAL VARIATION
+                    <small>Make a set of buttons appear vertically stacked rather than horizontally.</small>
+                </h2>
+                {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                   {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                   {{#dd.menu class="pull-right" as |ddm|}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                     {{/dd.menu}}
+                 {{/bs-dropdown}}
+            </div>
+            <div class="body">
+                <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                  {{#absb-button type="pink"}}Button{{/absb-button}}
+                  {{#absb-button type="cyan"}}Button{{/absb-button}}
+                  {{#bs-dropdown as |dd| }}
+                     {{#dd.button type="none" class="bg-teal"}}
+                        Dropdown
+                       <span class="caret"></span>
+                     {{/dd.button}}
+                     {{#dd.menu as |ddm|}}
+                         {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                         {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                       {{/dd.menu}}
+                   {{/bs-dropdown}}
+                    {{#absb-button type="orange"}}Button{{/absb-button}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    JUSTIFIED BUTTON GROUPS
+                    <small>Make a group of buttons stretch at equal sizes to span the entire width of its parent. Also works with button dropdowns within the button group.</small>
+                </h2>
+                {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                   {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                   {{#dd.menu class="pull-right" as |ddm|}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                     {{/dd.menu}}
+                 {{/bs-dropdown}}
+            </div>
+            <div class="body">
+                <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
+                    {{#absb-button tagName="a" type="pink"}}LEFT{{/absb-button}}
+                    {{#absb-button tagName="a" type="pink"}}MIDDLE{{/absb-button}}
+                    {{#absb-button tagName="a" type="pink"}}RIGHT{{/absb-button}}
+                </div>
+
+                <div class="btn-group btn-group-justified m-t-25 m-b-15" role="group" aria-label="Justified button group with nested dropdown">
+                    {{#absb-button tagName="a" type="pink"}}LEFT{{/absb-button}}
+                    {{#absb-button tagName="a" type="pink"}}MIDDLE{{/absb-button}}
+                    {{#bs-dropdown as |dd| }}
+                       {{#dd.button type="none" class="bg-pink"}}
+                          Dropdown
+                         <span class="caret"></span>
+                       {{/dd.button}}
+                       {{#dd.menu as |ddm|}}
+                           {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                           {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                         {{/dd.menu}}
+                     {{/bs-dropdown}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #END# Button Groups -->
+<!-- Button Dropdowns -->
+<div class="block-header">
+    <h2>
+        BUTTON DROPDOWNS
+        <small>Use any button to trigger a dropdown menu by placing it within a .btn-group and providing the proper menu markup.</small>
+    </h2>
+</div>
+<div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    SINGLE BUTTON DROPDOWNS
+                    <small>Turn a button into a dropdown toggle with some basic markup changes.</small>
+                </h2>
+                {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                   {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                   {{#dd.menu class="pull-right" as |ddm|}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                     {{/dd.menu}}
+                 {{/bs-dropdown}}
+            </div>
+            <div class="body">
+                <div class="demo-single-button-dropdowns">
+                    {{#bs-dropdown as |dd| }}
+                       {{#dd.button type="default"}}
+                          DEFAULT
+                         <span class="caret"></span>
+                       {{/dd.button}}
+                       {{#dd.menu as |ddm|}}
+                         {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                         {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                       {{/dd.menu}}
+                     {{/bs-dropdown}}
+
+                     {{#bs-dropdown as |dd| }}
+                        {{#dd.button type="primary"}}
+                           PRIMARY
+                          <span class="caret"></span>
+                        {{/dd.button}}
+                        {{#dd.menu as |ddm|}}
+                          {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                          {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                        {{/dd.menu}}
+                      {{/bs-dropdown}}
+
+                      {{#bs-dropdown as |dd| }}
+                         {{#dd.button type="success"}}
+                            SUCCESS
+                           <span class="caret"></span>
+                         {{/dd.button}}
+                         {{#dd.menu as |ddm|}}
+                           {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                           {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                         {{/dd.menu}}
+                       {{/bs-dropdown}}
+
+                       {{#bs-dropdown as |dd| }}
+                          {{#dd.button type="info"}}
+                             INFO
+                            <span class="caret"></span>
+                          {{/dd.button}}
+                          {{#dd.menu as |ddm|}}
+                            {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                            {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                          {{/dd.menu}}
+                        {{/bs-dropdown}}
+
+
+                        {{#bs-dropdown as |dd| }}
+                           {{#dd.button type="warning"}}
+                              WARNING
+                             <span class="caret"></span>
+                           {{/dd.button}}
+                           {{#dd.menu as |ddm|}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                             {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                           {{/dd.menu}}
+                         {{/bs-dropdown}}
+                </div>
+
+                <h2 class="card-inside-title">
+                    With Material Design Colors
+                    <small>You can use material design colors which examples are <code>.bg-pink</code> class</small>
+                </h2>
+                <div class="demo-single-button-dropdowns">
+                  {{#bs-dropdown as |dd| }}
+                     {{#dd.button type="none" class="bg-pink"}}
+                        PINK
+                       <span class="caret"></span>
+                     {{/dd.button}}
+                     {{#dd.menu as |ddm|}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                     {{/dd.menu}}
+                   {{/bs-dropdown}}
+
+                   {{#bs-dropdown as |dd| }}
+                      {{#dd.button type="none" class="bg-cyan"}}
+                         CYAN
+                        <span class="caret"></span>
+                      {{/dd.button}}
+                      {{#dd.menu as |ddm|}}
+                        {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                        {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                      {{/dd.menu}}
+                    {{/bs-dropdown}}
+
+                    {{#bs-dropdown as |dd| }}
+                       {{#dd.button type="none" class="bg-teal"}}
+                          TEAL
+                         <span class="caret"></span>
+                       {{/dd.button}}
+                       {{#dd.menu as |ddm|}}
+                         {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                         {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                       {{/dd.menu}}
+                     {{/bs-dropdown}}
+
+                     {{#bs-dropdown as |dd| }}
+                        {{#dd.button type="none" class="bg-orange"}}
+                           ORANGE
+                          <span class="caret"></span>
+                        {{/dd.button}}
+                        {{#dd.menu as |ddm|}}
+                          {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                          {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                        {{/dd.menu}}
+                      {{/bs-dropdown}}
+
+                      {{#bs-dropdown as |dd| }}
+                         {{#dd.button type="none" class="bg-purple"}}
+                            PURPLE
+                           <span class="caret"></span>
+                         {{/dd.button}}
+                         {{#dd.menu as |ddm|}}
+                           {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                           {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                         {{/dd.menu}}
+                       {{/bs-dropdown}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    SPLITE BUTTON DROPDOWNS
+                    <small>Similarly, create split button dropdowns with the same markup changes, only with a separate button.</small>
+                </h2>
+                {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                   {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                   {{#dd.menu class="pull-right" as |ddm|}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                     {{/dd.menu}}
+                 {{/bs-dropdown}}
+            </div>
+            <div class="body">
+                <div class="demo-splite-button-dropdowns">
+
+                  {{#bs-dropdown as |dd| }}
+                    {{#absb-button type="default"}}DEFAULT{{/absb-button}}
+                     {{#dd.button type="default"}}
+                        <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
+                     {{/dd.button}}
+                     {{#dd.menu as |ddm|}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                     {{/dd.menu}}
+                   {{/bs-dropdown}}
+
+
+                   {{#bs-dropdown as |dd| }}
+                     {{#absb-button type="primary"}}PRIMARY{{/absb-button}}
+                      {{#dd.button type="primary"}}
+                         <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
+                      {{/dd.button}}
+                      {{#dd.menu as |ddm|}}
+                        {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                        {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                      {{/dd.menu}}
+                    {{/bs-dropdown}}
+
+                    {{#bs-dropdown as |dd| }}
+                      {{#absb-button type="success"}}SUCCESS{{/absb-button}}
+                       {{#dd.button type="success"}}
+                          <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
+                       {{/dd.button}}
+                       {{#dd.menu as |ddm|}}
+                         {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                         {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                       {{/dd.menu}}
+                     {{/bs-dropdown}}
+
+                     {{#bs-dropdown as |dd| }}
+                       {{#absb-button type="info"}}INFO{{/absb-button}}
+                        {{#dd.button type="info"}}
+                           <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
+                        {{/dd.button}}
+                        {{#dd.menu as |ddm|}}
+                          {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                          {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                        {{/dd.menu}}
+                      {{/bs-dropdown}}
+
+                      {{#bs-dropdown as |dd| }}
+                        {{#absb-button type="warning"}}WARNING{{/absb-button}}
+                         {{#dd.button type="warning"}}
+                            <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
+                         {{/dd.button}}
+                         {{#dd.menu as |ddm|}}
+                           {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                           {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                         {{/dd.menu}}
+                       {{/bs-dropdown}}
+                </div>
+
+                <h2 class="card-inside-title">
+                    With Material Design Colors
+                    <small>You can use material design colors which examples are <code>.bg-pink</code> class</small>
+                </h2>
+                <div class="demo-splite-button-dropdowns">
+                  {{#bs-dropdown as |dd| }}
+                    {{#absb-button type="pink"}}PINK{{/absb-button}}
+                     {{#dd.button type="none" class="bg-pink"}}
+                        <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
+                     {{/dd.button}}
+                     {{#dd.menu as |ddm|}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                     {{/dd.menu}}
+                   {{/bs-dropdown}}
+
+                   {{#bs-dropdown as |dd| }}
+                     {{#absb-button type="cyan"}}CYAN{{/absb-button}}
+                      {{#dd.button type="none" class="bg-cyan"}}
+                         <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
+                      {{/dd.button}}
+                      {{#dd.menu as |ddm|}}
+                        {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                        {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                      {{/dd.menu}}
+                    {{/bs-dropdown}}
+
+                    {{#bs-dropdown as |dd| }}
+                      {{#absb-button type="teal"}}TEAL{{/absb-button}}
+                       {{#dd.button type="none" class="bg-teal"}}
+                          <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
+                       {{/dd.button}}
+                       {{#dd.menu as |ddm|}}
+                         {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                         {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                       {{/dd.menu}}
+                     {{/bs-dropdown}}
+
+                     {{#bs-dropdown as |dd| }}
+                       {{#absb-button type="orange"}}ORANGE{{/absb-button}}
+                        {{#dd.button type="none" class="bg-orange"}}
+                           <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
+                        {{/dd.button}}
+                        {{#dd.menu as |ddm|}}
+                          {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                          {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                        {{/dd.menu}}
+                      {{/bs-dropdown}}
+
+                      {{#bs-dropdown as |dd| }}
+                        {{#absb-button type="purple"}}PRUPLE{{/absb-button}}
+                         {{#dd.button type="none" class="bg-purple"}}
+                            <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
+                         {{/dd.button}}
+                         {{#dd.menu as |ddm|}}
+                           {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                           {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                         {{/dd.menu}}
+                       {{/bs-dropdown}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #END# Button Dropdowns -->
+<!-- Dropups -->
+<div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    DROPUP VARIATION
+                    <small>Trigger dropdown menus above elements by adding <code>.dropup</code> to the parent.</small>
+                </h2>
+                {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                   {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                   {{#dd.menu class="pull-right" as |ddm|}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                     {{/dd.menu}}
+                 {{/bs-dropdown}}
+            </div>
+            <div class="body">
+                <div class="demo-dropup">
+                  {{#bs-dropdown direction="up" as |dd| }}
+                    {{#absb-button type="default"}}DEFAULT{{/absb-button}}
+                     {{#dd.button type="default"}}
+                        <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
+                     {{/dd.button}}
+                     {{#dd.menu as |ddm|}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                     {{/dd.menu}}
+                   {{/bs-dropdown}}
+
+
+                   {{#bs-dropdown direction="up" as |dd| }}
+                     {{#absb-button type="primary"}}PRIMARY{{/absb-button}}
+                      {{#dd.button type="primary"}}
+                         <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
+                      {{/dd.button}}
+                      {{#dd.menu as |ddm|}}
+                        {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                        {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                      {{/dd.menu}}
+                    {{/bs-dropdown}}
+
+                    {{#bs-dropdown direction="up" as |dd| }}
+                      {{#absb-button type="success"}}SUCCESS{{/absb-button}}
+                       {{#dd.button type="success"}}
+                          <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
+                       {{/dd.button}}
+                       {{#dd.menu as |ddm|}}
+                         {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                         {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                       {{/dd.menu}}
+                     {{/bs-dropdown}}
+
+                     {{#bs-dropdown direction="up" as |dd| }}
+                       {{#absb-button type="info"}}INFO{{/absb-button}}
+                        {{#dd.button type="info"}}
+                           <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
+                        {{/dd.button}}
+                        {{#dd.menu as |ddm|}}
+                          {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                          {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                        {{/dd.menu}}
+                      {{/bs-dropdown}}
+
+                      {{#bs-dropdown direction="up" as |dd| }}
+                        {{#absb-button type="warning"}}WARNING{{/absb-button}}
+                         {{#dd.button type="warning"}}
+                            <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
+                         {{/dd.button}}
+                         {{#dd.menu as |ddm|}}
+                           {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                           {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                         {{/dd.menu}}
+                       {{/bs-dropdown}}
+                </div>
+                <h2 class="card-inside-title">
+                    With Material Design Colors
+                    <small>You can use material design colors which examples are <code>.bg-pink</code> class</small>
+                </h2>
+                <div class="demo-dropup">
+                  {{#bs-dropdown direction="up" as |dd| }}
+                    {{#absb-button type="pink"}}PINK{{/absb-button}}
+                     {{#dd.button type="none" class="bg-pink"}}
+                        <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
+                     {{/dd.button}}
+                     {{#dd.menu as |ddm|}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                       {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                     {{/dd.menu}}
+                   {{/bs-dropdown}}
+
+                   {{#bs-dropdown direction="up" as |dd| }}
+                     {{#absb-button type="cyan"}}CYAN{{/absb-button}}
+                      {{#dd.button type="none" class="bg-cyan"}}
+                         <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
+                      {{/dd.button}}
+                      {{#dd.menu as |ddm|}}
+                        {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                        {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                      {{/dd.menu}}
+                    {{/bs-dropdown}}
+
+                    {{#bs-dropdown direction="up" as |dd| }}
+                      {{#absb-button type="teal"}}TEAL{{/absb-button}}
+                       {{#dd.button type="none" class="bg-teal"}}
+                          <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
+                       {{/dd.button}}
+                       {{#dd.menu as |ddm|}}
+                         {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                         {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                       {{/dd.menu}}
+                     {{/bs-dropdown}}
+
+                     {{#bs-dropdown direction="up" as |dd| }}
+                       {{#absb-button type="orange"}}ORANGE{{/absb-button}}
+                        {{#dd.button type="none" class="bg-orange"}}
+                           <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
+                        {{/dd.button}}
+                        {{#dd.menu as |ddm|}}
+                          {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                          {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                        {{/dd.menu}}
+                      {{/bs-dropdown}}
+
+                      {{#bs-dropdown direction="up" as |dd| }}
+                        {{#absb-button type="purple"}}PRUPLE{{/absb-button}}
+                         {{#dd.button type="none" class="bg-purple"}}
+                            <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span>
+                         {{/dd.button}}
+                         {{#dd.menu as |ddm|}}
+                           {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                           {{#ddm.item}}{{#link-to 'board.index'}}Dropdown link{{/link-to}}{{/ddm.item}}
+                         {{/dd.menu}}
+                       {{/bs-dropdown}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #END# Dropups -->
