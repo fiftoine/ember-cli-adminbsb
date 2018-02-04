@@ -32,6 +32,7 @@ Router.map(function() {
       this.route('badges');
       this.route('breadcrumbs');
       this.route('buttons');
+      this.route('collapse');
     });
   });
 });

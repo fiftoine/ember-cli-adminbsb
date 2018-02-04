@@ -192,5 +192,12 @@
 
 ul.navbar-dropdown-menu  li a{
   display: block;
+}
 
+.panel-stack{
+  margin-bottom: 0;
+}
+
+.panel-stack + .panel-stack{
+  margin-top: 5px;
 }
