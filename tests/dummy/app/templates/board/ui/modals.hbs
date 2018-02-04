@@ -1,0 +1,160 @@
+
+            <div class="block-header">
+                <h2>MODALS</h2>
+            </div>
+            <!-- Modal Size Example -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                MODAL SIZE EXAMPLE
+                                <small>Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.</small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            {{#absb-button class="m-r-20" onClick=(action (mut modalDefaultIn) true)}}MODAL - DEFAULT SIZE{{/absb-button}}
+                            {{#absb-button class="m-r-20" onClick=(action (mut modalLgIn) true)}}MODAL - LARGE SIZE{{/absb-button}}
+                            {{#absb-button onClick=(action (mut modalSmIn) true)}}MODAL - SMALL SIZE{{/absb-button}}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Modal Size Example -->
+            <!-- Material Design Colors -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                WITH MATERIAL DESIGN COLORS
+                                <small>You can use material design colors which examples are <code>.modal-col-pink</code> class</small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            <div class="button-demo js-modal-buttons">
+
+                                {{#absb-button type="red" onClick=(queue (action (mut modalColor) "red") (action (mut modalColorIn) true))}}RED{{/absb-button}}
+
+                                {{#absb-button type="pink" onClick=(queue (action (mut modalColor) "pink") (action (mut modalColorIn) true))}}PINK{{/absb-button}}
+                                {{#absb-button type="purple" onClick=(queue (action (mut modalColor) "purple") (action (mut modalColorIn) true))}}PURPLE{{/absb-button}}
+                                {{#absb-button type="deep-purple" onClick=(queue (action (mut modalColor) "deep-purple") (action (mut modalColorIn) true))}}DEEP PURPLE{{/absb-button}}
+                                {{#absb-button type="indigo" onClick=(queue (action (mut modalColor) "indigo") (action (mut modalColorIn) true))}}INDIGO{{/absb-button}}
+                                {{#absb-button type="blue" onClick=(queue (action (mut modalColor) "blue") (action (mut modalColorIn) true))}}BLUE{{/absb-button}}
+                                {{#absb-button type="light-blue" onClick=(queue (action (mut modalColor) "light-blue") (action (mut modalColorIn) true))}}LIGHT BLUE{{/absb-button}}
+                                {{#absb-button type="cyan" onClick=(queue (action (mut modalColor) "cyan") (action (mut modalColorIn) true))}}CYAN{{/absb-button}}
+                                {{#absb-button type="teal" onClick=(queue (action (mut modalColor) "teal") (action (mut modalColorIn) true))}}TEAL{{/absb-button}}
+                                {{#absb-button type="green" onClick=(queue (action (mut modalColor) "green") (action (mut modalColorIn) true))}}GREEN{{/absb-button}}
+                                {{#absb-button type="light-green" onClick=(queue (action (mut modalColor) "light-green") (action (mut modalColorIn) true))}}LIGHT GREEN{{/absb-button}}
+                                {{#absb-button type="lime" onClick=(queue (action (mut modalColor) "lime") (action (mut modalColorIn) true))}}LIME{{/absb-button}}
+                                {{#absb-button type="yellow" onClick=(queue (action (mut modalColor) "yellow") (action (mut modalColorIn) true))}}YELLOW{{/absb-button}}
+                                {{#absb-button type="amber" onClick=(queue (action (mut modalColor) "amber") (action (mut modalColorIn) true))}}AMBER{{/absb-button}}
+                                {{#absb-button type="orange" onClick=(queue (action (mut modalColor) "orange") (action (mut modalColorIn) true))}}ORANGE{{/absb-button}}
+                                {{#absb-button type="deep-orange" onClick=(queue (action (mut modalColor) "deep-orange") (action (mut modalColorIn) true))}}DEEP ORANGE{{/absb-button}}
+                                {{#absb-button type="brown" onClick=(queue (action (mut modalColor) "brown") (action (mut modalColorIn) true))}}BROWN{{/absb-button}}
+                                {{#absb-button type="grey" onClick=(queue (action (mut modalColor) "grey") (action (mut modalColorIn) true))}}GREY{{/absb-button}}
+                                {{#absb-button type="blue-grey" onClick=(queue (action (mut modalColor) "blue-grey") (action (mut modalColorIn) true))}}BLUE GREY{{/absb-button}}
+                                {{#absb-button type="black" class="waves-light" onClick=(queue (action (mut modalColor) "black") (action (mut modalColorIn) true))}}BLACK{{/absb-button}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Material Design Colors -->
+            <!-- Modal Dialogs ====================================================================================================================== -->
+            <!-- Default Size -->
+
+            {{#bs-modal open=modalDefaultIn onHidden=(action (mut modalDefaultIn) false) as |modal|}}
+              {{#modal.header}}
+                <h4 class="modal-title">
+                  Modal title
+                </h4>
+              {{/modal.header}}
+              {{#modal.body}}
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+                  vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper.
+                  Fusce pulvinar libero vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus
+                  nibh mattis erat, vitae porta nunc nisi non tellus. Vivamus mollis ante non massa egestas fringilla.
+                  Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur nunc.
+              {{/modal.body}}
+              {{#modal.footer}}
+                {{#absb-button class="btn-link" type="none"}}SAVE CHANGES{{/absb-button}}
+                {{#absb-button class="btn-link" type="none" onClick=(action modal.close)}}CLOSE{{/absb-button}}
+              {{/modal.footer}}
+            {{/bs-modal}}
+
+            {{#bs-modal open=modalLgIn size="lg" onHidden=(action (mut modalLgIn) false) as |modal|}}
+              {{#modal.header}}
+                <h4 class="modal-title">
+                  Modal title
+                </h4>
+              {{/modal.header}}
+              {{#modal.body}}
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+                  vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper.
+                  Fusce pulvinar libero vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus
+                  nibh mattis erat, vitae porta nunc nisi non tellus. Vivamus mollis ante non massa egestas fringilla.
+                  Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur nunc.
+              {{/modal.body}}
+              {{#modal.footer}}
+                {{#absb-button class="btn-link" type="none"}}SAVE CHANGES{{/absb-button}}
+                {{#absb-button class="btn-link" type="none" onClick=(action modal.close)}}CLOSE{{/absb-button}}
+              {{/modal.footer}}
+            {{/bs-modal}}
+
+
+            {{#bs-modal open=modalSmIn size="sm" onHidden=(action (mut modalSmIn) false) as |modal|}}
+              {{#modal.header}}
+                <h4 class="modal-title">
+                  Modal title
+                </h4>
+              {{/modal.header}}
+              {{#modal.body}}
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+                  vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper.
+                  Fusce pulvinar libero vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus
+                  nibh mattis erat, vitae porta nunc nisi non tellus. Vivamus mollis ante non massa egestas fringilla.
+                  Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur nunc.
+              {{/modal.body}}
+              {{#modal.footer}}
+                {{#absb-button class="btn-link" type="none"}}SAVE CHANGES{{/absb-button}}
+                {{#absb-button class="btn-link" type="none" onClick=(action modal.close)}}CLOSE{{/absb-button}}
+              {{/modal.footer}}
+            {{/bs-modal}}
+
+
+            {{#bs-modal open=modalColorIn class=(concat "modal-col-" modalColor)  onHidden=(action (mut modalColorIn) false) as |modal|}}
+              {{#modal.header}}
+                <h4 class="modal-title">
+                  Modal title
+                </h4>
+              {{/modal.header}}
+              {{#modal.body}}
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales orci ante, sed ornare eros vestibulum ut. Ut accumsan
+                  vitae eros sit amet tristique. Nullam scelerisque nunc enim, non dignissim nibh faucibus ullamcorper.
+                  Fusce pulvinar libero vel ligula iaculis ullamcorper. Integer dapibus, mi ac tempor varius, purus
+                  nibh mattis erat, vitae porta nunc nisi non tellus. Vivamus mollis ante non massa egestas fringilla.
+                  Vestibulum egestas consectetur nunc at ultricies. Morbi quis consectetur nunc.
+              {{/modal.body}}
+              {{#modal.footer}}
+                {{#absb-button class="btn-link" type="none"}}SAVE CHANGES{{/absb-button}}
+                {{#absb-button class="btn-link" type="none" onClick=(action modal.close)}}CLOSE{{/absb-button}}
+              {{/modal.footer}}
+            {{/bs-modal}}

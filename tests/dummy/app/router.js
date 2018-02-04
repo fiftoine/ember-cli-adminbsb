@@ -39,6 +39,7 @@ Router.map(function() {
       this.route('labels');
       this.route('list-groups');
       this.route('media');
+      this.route('modals');
     });
   });
 });

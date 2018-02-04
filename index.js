@@ -53,7 +53,7 @@ module.exports = {
         {name: 'ember-cli-string-helpers', target: '1.6.0'},
         {name: 'ember-truth-helpers', target: '2.0.0'},
         {name: 'ember-get-helper', target: '1.1.0'},
-        {name: 'ember-toggle-helper', target: '0.1.1'},
+        {name: 'ember-toggle-helper', target: '0.1.1'}
 
       ]
     })

@@ -202,3 +202,14 @@ ul.navbar-dropdown-menu  li a{
 .panel-stack + .panel-stack{
   margin-top: 5px;
 }
+
+
+
+@each $key, $val in $colors {
+    .modal-col-#{$key} {
+        background-color: initial;
+        .modal-content{
+          background-color: $val;
+        }
+    }
+}
