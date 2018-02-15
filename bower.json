@@ -1,0 +1,6 @@
+{
+  "name": "ember-adminbsb",
+  "dependencies": {
+    "ionrangeslider": "^2.1.4"
+  }
+}

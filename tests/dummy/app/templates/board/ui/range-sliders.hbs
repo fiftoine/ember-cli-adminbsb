@@ -1,0 +1,88 @@
+<div class="container-fluid">
+            <div class="block-header">
+                <h2>RANGE SLIDERS</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                EXAMPLES
+                                <small>Taken by Ion Range Slider which link is <a href="http://ionden.com/a/plugins/ion.rangeSlider/en.html" target="_blank">ionden.com/a/plugins/ion.rangeSlider/en.html</a></small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            <div class="irs-demo">
+                                <b>Start without params</b>
+                                {{ember-range-slider
+                                }}
+                            </div>
+                            <div class="irs-demo">
+                                <b>Set min value, max value and start point</b>
+                                {{ember-range-slider
+                                  max=1000
+                                  min=100
+                                  from=550
+                                }}
+                              </div>
+                            <div class="irs-demo">
+                                <b>Set type to double and specify range, also showing grid and adding prefix "$"</b>
+                                {{ember-range-slider
+                                  type="double"
+                                  max=1000
+                                  min=0
+                                  to=800
+                                  from=200
+                                  prefix="$"
+                                  grid=true
+                                }}
+                            </div>
+                            <div class="irs-demo">
+                                <b>Set up range with negative values</b>
+                                {{ember-range-slider
+                                  type="double"
+                                  max=1000
+                                  min=-1000
+                                  to=500
+                                  from=-500
+                                  grid=true
+                                }}
+                            </div>
+                            <div class="irs-demo">
+                                <b>Using step 250</b>
+                                {{ember-range-slider
+                                  type="double"
+                                  max=1000
+                                  min=-1000
+                                  to=500
+                                  from=-500
+                                  step=250
+                                  grid=true
+                                }}
+                            </div>
+                            <div class="irs-demo">
+                                <b>Set up range with fractional values, using fractional step</b>
+                                {{ember-range-slider
+                                  type="double"
+                                  max=12.8
+                                  min=-12.8
+                                  to=3.2
+                                  from=-3.2
+                                  step=0.1
+                                  grid=true
+                                }}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

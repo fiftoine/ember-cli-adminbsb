@@ -40,6 +40,11 @@ Router.map(function() {
       this.route('list-groups');
       this.route('media');
       this.route('modals');
+      this.route('notifications');
+      this.route('pagination');
+      this.route('preloaders');
+      this.route('progress-bars');
+      this.route('range-sliders');
     });
   });
 });

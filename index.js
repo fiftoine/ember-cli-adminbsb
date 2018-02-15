@@ -38,6 +38,10 @@ module.exports = {
     app.import('vendor/adminbsb-materialdesign-sparkline/jquery.sparkline.js');
     app.import('vendor/adminbsb-materialdesign-waves/waves.js');
     app.import('vendor/adminbsb-materialdesign-sweetalert/sweetalert.min.js');
+    app.import('vendor/adminbsb-materialdesign-bs-notify/bootstrap-notify.js');
+
+
+
 
   },
 
@@ -53,7 +57,8 @@ module.exports = {
         {name: 'ember-cli-string-helpers', target: '1.6.0'},
         {name: 'ember-truth-helpers', target: '2.0.0'},
         {name: 'ember-get-helper', target: '1.1.0'},
-        {name: 'ember-toggle-helper', target: '0.1.1'}
+        {name: 'ember-toggle-helper', target: '0.1.1'},
+        {name: 'ember-cli-range-slider', target: '0.2.7'},
 
       ]
     })
@@ -126,7 +131,13 @@ module.exports = {
       destDir: 'adminbsb-materialdesign-sweetalert',
     }));
 
-    trees = trees.concat([slimscrollFiles, waitMeFiles, countToFiles, sparklineFiles, wavesFiles, sweetAlertFiles]);
+    let bsNotifyFiles =fastbootTransform(new Funnel('node_modules/adminbsb-materialdesign', {
+      files:['bootstrap-notify.js'] ,
+      srcDir: '/plugins/bootstrap-notify',
+      destDir: 'adminbsb-materialdesign-bs-notify',
+    }));
+
+    trees = trees.concat([slimscrollFiles, waitMeFiles, countToFiles, sparklineFiles, wavesFiles, sweetAlertFiles, bsNotifyFiles]);
 
     if (tree) {
       trees.push(tree);
@@ -305,8 +316,15 @@ module.exports = {
       annotation: 'AdminBsbMaterialDesign-sweetalert'
     });
 
+    let rangeSlidersFiles = new Funnel('node_modules/adminbsb-materialdesign', {
+      files:['ion.rangeSlider.css', 'ion.rangeSlider.skinFlat.css'] ,
+      srcDir: '/plugins/ion-rangeslider/css',
+      destDir: 'adminbsb-materialdesign',
+      annotation: 'AdminBsbMaterialDesign-rangeslider'
+    });
 
-   return this._super.treeForStyles(mergeTrees([scssFiles,materializeFiles, bootstrapFiles, wavesFiles,animateFiles,morrisFiles, waitmeFiles,sweetAlertFiles, tree], { overwrite: true }));
+
+   return this._super.treeForStyles(mergeTrees([scssFiles,materializeFiles, bootstrapFiles, wavesFiles,animateFiles,morrisFiles, waitmeFiles,sweetAlertFiles, rangeSlidersFiles, tree], { overwrite: true }));
  },
 
  pathBase(packageName) {

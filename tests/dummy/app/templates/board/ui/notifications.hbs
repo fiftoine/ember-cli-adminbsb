@@ -1,0 +1,266 @@
+
+            <div class="block-header">
+                <h2>
+                    NOTIFICATIONS
+                    <small>Taken by Bootstrap Notification <a href="https://github.com/mouse0270/bootstrap-notify" target="_blank">github.com/mouse0270/bootstrap-notify</a></small>
+                </h2>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                NOTIFICATION POSITIONS
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix jsdemo-notification-button">
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                    {{#absb-button class="btn-block" type="primary" onClick=(action "notify" null null "top" "left")}}TOP LEFT{{/absb-button}}
+
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="primary" onClick=(action "notify" null null "top" "center")}}TOP CENTER{{/absb-button}}
+
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                      {{#absb-button class="btn-block" type="primary" onClick=(action "notify")}}TOP RIGHT{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                      {{#absb-button class="btn-block" type="primary" onClick=(action "notify" null null "bottom" "left")}}BOTTOM LEFT{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                    {{#absb-button class="btn-block" type="primary" onClick=(action "notify" null null "bottom" "center")}}BOTTOM CENTER{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                    {{#absb-button class="btn-block" type="primary" onClick=(action "notify" null null "bottom" "right")}}BOTTOM RIGHT{{/absb-button}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Notification Types -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                NOTIFICATION TYPES
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix jsdemo-notification-button">
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                    {{#absb-button class="btn-block" type="danger" onClick=(action "notify" null "danger" "bottom" "left")}}DANGER{{/absb-button}}
+
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="success" onClick=(action "notify" null "success" "bottom" "center")}}SUCCESS{{/absb-button}}
+
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="warning" onClick=(action "notify" null "warning" "bottom" "right")}}WARNING{{/absb-button}}
+
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="info" onClick=(action "notify" null "info" "bottom" "left")}}INFO{{/absb-button}}
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Notification Types -->
+            <!-- With Material Design Colors -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                WITH MATERIAL DESIGN COLORS
+                                <small>You can use the material design colors which example class are <code>.bg-pink, .bg-green</code></small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix jsdemo-notification-button">
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                    {{#absb-button class="btn-block" type="red" onClick=(action "notify" null "red" "bottom" "left")}}RED{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                    {{#absb-button class="btn-block" type="green" onClick=(action "notify" null "green" "bottom" "center")}}GREEN{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                    {{#absb-button class="btn-block" type="orange" onClick=(action "notify" null "orange" "bottom" "right")}}ORANGE{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                    {{#absb-button class="btn-block" type="blue" onClick=(action "notify" null "blue" "bottom" "left")}}BLUE{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                    {{#absb-button class="btn-block" type="teal" onClick=(action "notify" null "teal" "bottom" "right")}}TEAL{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                    {{#absb-button class="btn-block" type="cyan" onClick=(action "notify" null "cyan" "bottom" "center")}}CYAN{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                    {{#absb-button class="btn-block" type="pink" onClick=(action "notify" null "pink" "bottom" "left")}}PINK{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                    {{#absb-button class="btn-block" type="purple" onClick=(action "notify" null "purple" "bottom" "center")}}PURPLE{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                    {{#absb-button class="btn-block" type="blue-grey" onClick=(action "notify" null "blue-grey" "bottom" "right")}}BLUE GREY{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                    {{#absb-button class="btn-block" type="deep-orange" onClick=(action "notify" null "deep-orange" "bottom" "left")}}DEEP ORANGE{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                    {{#absb-button class="btn-block" type="light-green" onClick=(action "notify" null "light-green" "bottom" "center")}}LIGHT GREEN{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                    {{#absb-button class="btn-block" type="black" onClick=(action "notify" null "black" "bottom" "right")}}BLACK{{/absb-button}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# With Material Design Colors -->
+            <!-- Notification Animations -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                NOTIFICATION ANIMATIONS
+                                <small>You can use <a href="https://daneden.github.io/animate.css/" target="_blank">Animate.css</a> class for animating.</small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix jsdemo-notification-button">
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                    {{#absb-button class="btn-block" type="pink" onClick=(action "notify" null null "top" "left" "animated fadeIn" "animated fadeOut")}}FADE IN/OUT{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="pink" onClick=(action "notify" null null "top" "left" "animated fadeInLeft" "animated fadeOutLeft")}}FADE IN/OUT LEFT{{/absb-button}}
+
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="pink" onClick=(action "notify" null null "top" "right" "animated fadeInRight" "animated fadeOutRight")}}FADE IN/OUT RIGHT{{/absb-button}}
+
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="pink" onClick=(action "notify" null null "top" "left" "animated fadeInUp" "animated fadeOutUp")}}FADE IN/OUT UP{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="pink" onClick=(action "notify" null null "top" "left" "animated fadeInDown" "animated fadeOutDown")}}FADE IN/OUT DOWN{{/absb-button}}
+
+                                </div>
+                            </div>
+
+                            <div class="row clearfix jsdemo-notification-button">
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="cyan" onClick=(action "notify" null null "top" "left" "animated bounceIn" "animated bounceOut")}}BOUNCE IN/OUT{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="cyan" onClick=(action "notify" null null "top" "left" "animated bounceInLeft" "animated bounceOutLeft")}}BOUNCE IN/OUT LEFT{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="cyan" onClick=(action "notify" null null "top" "right" "animated bounceInRight" "animated bounceOutRight")}}BOUNCE IN/OUT RIGHT{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="cyan" onClick=(action "notify" null null "top" "left" "animated bounceInUp" "animated bounceOutUp")}}BOUNCE IN/OUT UP{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="cyan" onClick=(action "notify" null null "top" "left" "animated bounceInDown" "animated bounceOutDown")}}BOUNCE IN/OUT DOWN{{/absb-button}}
+                                </div>
+                            </div>
+
+                            <div class="row clearfix jsdemo-notification-button">
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="teal" onClick=(action "notify" null null "top" "left" "animated rotateIn" "animated rotateOut")}}ROTATE IN/OUT{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="teal" onClick=(action "notify" null null "top" "left" "animated rotateInUpLeft" "animated rotateOutUpLeft")}}ROTATE IN/OUT UP LEFT{{/absb-button}}
+                              </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="teal" onClick=(action "notify" null null "top" "right" "animated rotateInUpRight" "animated rotateOutUpRight")}}ROTATE IN/OUT UP RIGHT{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="teal" onClick=(action "notify" null null "top" "left" "animated rotateInDownLeft" "animated rotateOutDownLeft")}}ROTATE IN/OUT DOWN LEFT{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="teal" onClick=(action "notify" null null "top" "right" "animated rotateInDownRight" "animated rotateOutDownRight")}}ROTATE IN/OUT DOWN RIGHT{{/absb-button}}
+                                </div>
+                            </div>
+
+                            <div class="row clearfix jsdemo-notification-button">
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="orange" onClick=(action "notify" null null "top" "left" "animated zoomIn" "animated zoomOut")}}ZOOM IN/OUT{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="orange" onClick=(action "notify" null null "top" "left" "animated zoomInLeft" "animated zoomOutLeft")}}ZOOM IN/OUT LEFT{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="orange" onClick=(action "notify" null null "top" "right" "animated zoomInRight" "animated zoomOutRight")}}ZOOM IN/OUT RIGHT{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="orange" onClick=(action "notify" null null "top" "left" "animated zoomInUp" "animated zoomOutUp")}}ZOOM IN/OUT UP{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="orange" onClick=(action "notify" null null "top" "left" "animated zoomInDown" "animated zoomOutDown")}}ZOOM IN/OUT DOWN{{/absb-button}}
+                                </div>
+                            </div>
+
+                            <div class="row clearfix jsdemo-notification-button">
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                    {{#absb-button class="btn-block" type="purple" onClick=(action "notify" null null "top" "left" "animated flipInX" "animated flipOutX")}}FLIP IN/OUT X{{/absb-button}}
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                  {{#absb-button class="btn-block" type="purple" onClick=(action "notify" null null "top" "left" "animated flipInY" "animated flipOutY")}}FLIP IN/OUT Y{{/absb-button}}
+                                </div>
+                            </div>
+
+                            <div class="row clearfix jsdemo-notification-button">
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                    {{#absb-button class="btn-block" type="indigo" onClick=(action "notify" null null "top" "right" "animated lightSpeedIn" "animated lightSpeedOut")}}LIGHT SPEED IN/OUT{{/absb-button}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Notification Animations -->

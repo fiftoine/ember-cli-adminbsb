@@ -1,0 +1,215 @@
+
+            <div class="block-header">
+                <h2>PROGRESS BARS</h2>
+            </div>
+            <!-- Basic Examples -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                BASIC EXAMPLES
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+
+                          {{#bs-progress as |p|}}
+                            {{#p.bar value=60 minValue=0 maxValue=100 showLabel=false roundDigits=roundDigits type="primary" striped=false animate=false}}60% Complete{{/p.bar}}
+                          {{/bs-progress}}
+
+                          {{#bs-progress as |p|}}
+                            {{#p.bar value=75 minValue=0 maxValue=100 showLabel=true roundDigits=roundDigits type="primary" striped=false animate=false}}75%{{/p.bar}}
+                          {{/bs-progress}}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Basic Examples -->
+            <!-- Contextual Alternatives -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                CONTEXTUAL ALTERNATIVES
+                                <small>Progress bars use some of the same button and alert classes for consistent styles.</small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                          {{#bs-progress as |p|}}
+                            {{#p.bar value=40 minValue=0 maxValue=100 type="success" }}40% Complete (success){{/p.bar}}
+                          {{/bs-progress}}
+                          {{#bs-progress as |p|}}
+                          {{#p.bar value=20 minValue=0 maxValue=100 type="info" }}20% Complete{{/p.bar}}
+                          {{/bs-progress}}
+                          {{#bs-progress as |p|}}
+                            {{#p.bar value=60 minValue=0 maxValue=100 type="warning"}}60% Complete (warning){{/p.bar}}
+                          {{/bs-progress}}
+                          {{#bs-progress as |p|}}
+                            {{#p.bar value=80 minValue=0 maxValue=100 type="danger"}}80% Complete (danger){{/p.bar}}
+                          {{/bs-progress}}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Contextual Alternatives -->
+            <!-- Striped -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                STRIPED
+                                <small>Uses a gradient to create a striped effect. Not available in IE9 and below.</small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                          {{#bs-progress as |p|}}
+                            {{#p.bar value=40 minValue=0 maxValue=100 type="success" striped=true}}40% Complete (success){{/p.bar}}
+                          {{/bs-progress}}
+                          {{#bs-progress as |p|}}
+                          {{#p.bar value=20 minValue=0 maxValue=100 type="info"  striped=true}}20% Complete{{/p.bar}}
+                          {{/bs-progress}}
+                          {{#bs-progress as |p|}}
+                            {{#p.bar value=60 minValue=0 maxValue=100 type="warning" striped=true}}60% Complete (warning){{/p.bar}}
+                          {{/bs-progress}}
+                          {{#bs-progress as |p|}}
+                            {{#p.bar value=80 minValue=0 maxValue=100 type="danger" striped=true}}80% Complete (danger){{/p.bar}}
+                          {{/bs-progress}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Striped -->
+            <!-- Animated -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                ANIMATED
+                                <small>Add <code>.active</code> to <code>.progress-bar-striped</code> to animate the stripes right to left. Not available in IE9 and below.</small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                          {{#bs-progress as |p|}}
+                            {{#p.bar value=40 minValue=0 maxValue=100 type="success" striped=true animate=true}}40% Complete (success){{/p.bar}}
+                          {{/bs-progress}}
+                          {{#bs-progress as |p|}}
+                          {{#p.bar value=20 minValue=0 maxValue=100 type="info"  striped=true animate=true}}20% Complete{{/p.bar}}
+                          {{/bs-progress}}
+                          {{#bs-progress as |p|}}
+                            {{#p.bar value=60 minValue=0 maxValue=100 type="warning" striped=true animate=true}}60% Complete (warning){{/p.bar}}
+                          {{/bs-progress}}
+                          {{#bs-progress as |p|}}
+                            {{#p.bar value=80 minValue=0 maxValue=100 type="danger" striped=true animate=true}}80% Complete (danger){{/p.bar}}
+                          {{/bs-progress}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Animated -->
+            <!-- Stacked -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                STACKED
+                                <small>Place multiple bars into the same <code>.progress</code> to stack them.</small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+
+                          {{#bs-progress as |p|}}
+                            {{#p.bar value=35 minValue=0 maxValue=100 type="success" }}35% Complete (success){{/p.bar}}
+                            {{#p.bar value=20 minValue=0 maxValue=100 type="warning" }}20% Complete (warning){{/p.bar}}
+                            {{#p.bar value=10 minValue=0 maxValue=100 type="danger"}}10% Complete (danger){{/p.bar}}
+                          {{/bs-progress}}
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Stacked -->
+            <!-- With Material Design Colors -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                WITH MATERIAL DESIGN COLORS
+                                <small>You can use material design color which examples are <code>.bg-pink, .bg-red</code> class</small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                          {{#bs-progress as |p|}}
+                            {{#p.bar class="bg-pink" value=40 minValue=0 maxValue=100 type="none" striped=true animate=false showLabel=true}}  PINK PROGRESS BAR{{/p.bar}}
+                          {{/bs-progress}}
+                          {{#bs-progress as |p|}}
+                            {{#p.bar class="bg-cyan" value=75 minValue=0 maxValue=100 type="none" striped=true animate=true showLabel=true}}  CYAN PROGRESS BAR{{/p.bar}}
+                          {{/bs-progress}}
+                          {{#bs-progress as |p|}}
+                            {{#p.bar class="bg-teal" value=32 minValue=0 maxValue=100 type="none" striped=true animate=false showLabel=true}} TEAL PROGRESS BAR{{/p.bar}}
+                          {{/bs-progress}}
+                          {{#bs-progress as |p|}}
+                            {{#p.bar class="bg-orange" value=84 minValue=0 maxValue=100 type="none" striped=true animate=true showLabel=true}}  ORANGE PROGRESS BAR{{/p.bar}}
+                          {{/bs-progress}}
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# With Material Design Colors -->
