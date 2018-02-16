@@ -1,0 +1,513 @@
+
+            <div class="block-header">
+                <h2>TABS</h2>
+            </div>
+            <!-- Example Tab -->
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                EXAMPLE TAB
+                                <small>Add quick, dynamic tab functionality to transition through panes of local content</small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+
+                          {{#bs-tab as |tab|}}
+                            {{#tab.pane title="HOME"}}
+                              <b>Home Content</b>
+                              <p>
+                                  Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                                  Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                                  pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                                  sadipscing mel.
+                              </p>
+                            {{/tab.pane}}
+                            {{#tab.pane title="PROFILE"}}
+                              <b>Profile Content</b>
+                              <p>
+                                  Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                                  Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                                  pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                                  sadipscing mel.
+                              </p>
+                            {{/tab.pane}}
+                            {{#tab.pane title="MESSAGES"}}
+                              <b>Message Content</b>
+                              <p>
+                                  Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                                  Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                                  pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                                  sadipscing mel.
+                              </p>
+                            {{/tab.pane}}
+                            {{#tab.pane title="SETTINGS"}}
+                              <b>Settings Content</b>
+                              <p>
+                                  Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                                  Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                                  pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                                  sadipscing mel.
+                              </p>
+                            {{/tab.pane}}
+                          {{/bs-tab}}
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Example Tab -->
+            <!-- Tabs With Only Icon Title -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                TABS WITH ONLY ICON TITLE
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+
+
+                          {{#bs-tab customTabs=true as |tab|}}
+                            {{#bs-nav type="tabs" as |nav|}}
+                              {{#nav.item active=(bs-eq tab.activeId "pane1")}}
+                                <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane1"}}><i class="material-icons">home</i></a>
+                              {{/nav.item}}
+                              {{#nav.item active=(bs-eq tab.activeId "pane2")}}
+                                <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane2"}}><i class="material-icons">face</i></a>
+                              {{/nav.item}}
+                              {{#nav.item active=(bs-eq tab.activeId "pane3")}}
+                                <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane3"}}><i class="material-icons">email</i></a>
+                              {{/nav.item}}
+                              {{#nav.item active=(bs-eq tab.activeId "pane4")}}
+                                <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane4"}}><i class="material-icons">settings</i></a>
+                              {{/nav.item}}
+                            {{/bs-nav}}
+
+                            <div class="tab-content">
+                              {{#tab.pane elementId="pane1" title="Tab 1"}}
+                                <b>Home Content</b>
+                                <p>
+                                    Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                                    Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                                    pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                                    sadipscing mel.
+                                </p>
+                              {{/tab.pane}}
+                              {{#tab.pane elementId="pane2" title="Tab 2"}}
+                                <b>Profile Content</b>
+                                <p>
+                                    Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                                    Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                                    pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                                    sadipscing mel.
+                                </p>
+                              {{/tab.pane}}
+                              {{#tab.pane elementId="pane3" title="Tab 2"}}
+                                <b>Message Content</b>
+                                <p>
+                                    Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                                    Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                                    pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                                    sadipscing mel.
+                                </p>
+                              {{/tab.pane}}
+                              {{#tab.pane elementId="pane4" title="Tab 2"}}
+                              <b>Settings Content</b>
+                              <p>
+                                  Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                                  Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                                  pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                                  sadipscing mel.
+                              </p>
+                              {{/tab.pane}}
+                            </div>
+                          {{/bs-tab}}
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Tabs With Only Icon Title -->
+            <!-- Tabs With Icon Title -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                TABS WITH ICON TITLE
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                          {{#bs-tab customTabs=true as |tab|}}
+                            {{#bs-nav type="tabs" as |nav|}}
+                              {{#nav.item active=(bs-eq tab.activeId "pane21")}}
+                                <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane21"}}><i class="material-icons">home</i> HOME</a>
+                              {{/nav.item}}
+                              {{#nav.item active=(bs-eq tab.activeId "pane22")}}
+                                <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane22"}}><i class="material-icons">face</i> PROFILE</a>
+                              {{/nav.item}}
+                              {{#nav.item active=(bs-eq tab.activeId "pane23")}}
+                                <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane23"}}><i class="material-icons">email</i> MESSAGES</a>
+                              {{/nav.item}}
+                              {{#nav.item active=(bs-eq tab.activeId "pane24")}}
+                                <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane24"}}><i class="material-icons">settings</i> SETTINGS</a>
+                              {{/nav.item}}
+                            {{/bs-nav}}
+
+                            <div class="tab-content">
+                              {{#tab.pane elementId="pane21" title="Tab 1"}}
+                                <b>Home Content</b>
+                                <p>
+                                    Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                                    Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                                    pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                                    sadipscing mel.
+                                </p>
+                              {{/tab.pane}}
+                              {{#tab.pane elementId="pane22" title="Tab 2"}}
+                                <b>Profile Content</b>
+                                <p>
+                                    Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                                    Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                                    pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                                    sadipscing mel.
+                                </p>
+                              {{/tab.pane}}
+                              {{#tab.pane elementId="pane23" title="Tab 2"}}
+                                <b>Message Content</b>
+                                <p>
+                                    Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                                    Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                                    pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                                    sadipscing mel.
+                                </p>
+                              {{/tab.pane}}
+                              {{#tab.pane elementId="pane24" title="Tab 2"}}
+                              <b>Settings Content</b>
+                              <p>
+                                  Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                                  Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                                  pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                                  sadipscing mel.
+                              </p>
+                              {{/tab.pane}}
+                            </div>
+                          {{/bs-tab}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Tabs With Icon Title -->
+            <!-- Tabs With Material Design Colors -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                TABS WITH MATERIAL DESIGN COLORS
+                                <small>You can use Material Design Colors which examples are <b>.tab-col-red, .tab-col-pink</b> class.</small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                  {{#bs-tab customTabs=true activeId="pane21" as |tab|}}
+                                    {{#bs-nav type="tabs" class=" tab-col-pink" as |nav|}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane21")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane21"}}> HOME</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane22")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane22"}}> PROFILE</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane23")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane23"}}> MESSAGES</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane24")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane24"}}> SETTINGS</a>
+                                      {{/nav.item}}
+                                    {{/bs-nav}}
+                                  {{/bs-tab}}
+
+
+
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                  {{#bs-tab customTabs=true activeId="pane21" as |tab|}}
+                                    {{#bs-nav type="tabs" class=" tab-col-deep-orange" as |nav|}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane21")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane21"}}> HOME</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane22")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane22"}}> PROFILE</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane23")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane23"}}> MESSAGES</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane24")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane24"}}> SETTINGS</a>
+                                      {{/nav.item}}
+                                    {{/bs-nav}}
+                                  {{/bs-tab}}
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                  {{#bs-tab customTabs=true activeId="pane21" as |tab|}}
+                                    {{#bs-nav type="tabs" class=" tab-col-teal" as |nav|}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane21")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane21"}}> HOME</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane22")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane22"}}> PROFILE</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane23")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane23"}}> MESSAGES</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane24")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane24"}}> SETTINGS</a>
+                                      {{/nav.item}}
+                                    {{/bs-nav}}
+                                  {{/bs-tab}}
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                  {{#bs-tab customTabs=true activeId="pane21" as |tab|}}
+                                    {{#bs-nav type="tabs" class=" tab-col-orange" as |nav|}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane21")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane21"}}> HOME</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane22")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane22"}}> PROFILE</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane23")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane23"}}> MESSAGES</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane24")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane24"}}> SETTINGS</a>
+                                      {{/nav.item}}
+                                    {{/bs-nav}}
+                                  {{/bs-tab}}
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                  {{#bs-tab customTabs=true activeId="pane21" as |tab|}}
+                                    {{#bs-nav type="tabs" class=" tab-col-purple" as |nav|}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane21")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane21"}}> HOME</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane22")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane22"}}> PROFILE</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane23")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane23"}}> MESSAGES</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane24")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane24"}}> SETTINGS</a>
+                                      {{/nav.item}}
+                                    {{/bs-nav}}
+                                  {{/bs-tab}}
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                  {{#bs-tab customTabs=true activeId="pane21" as |tab|}}
+                                    {{#bs-nav type="tabs" class=" tab-col-blue-grey" as |nav|}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane21")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane21"}}> HOME</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane22")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane22"}}> PROFILE</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane23")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane23"}}> MESSAGES</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane24")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane24"}}> SETTINGS</a>
+                                      {{/nav.item}}
+                                    {{/bs-nav}}
+                                  {{/bs-tab}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Tabs With Material Design Colors -->
+            <!-- Tabs With Custom Animations -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                TABS WITH CUSTOM ANIMATIONS
+                                <small>You can use different animation class. We used Animation.css which link is <a href="https://daneden.github.io/animate.css/" target="_blank">https://daneden.github.io/animate.css/</a></small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+                                  {{#bs-tab customTabs=true as |tab|}}
+                                    {{#bs-nav type="tabs" as |nav|}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane31")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane31"}}> HOME</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane32")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane32"}}>PROFILE</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane33")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane33"}}> MESSAGES</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane34")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane34"}}>SETTINGS</a>
+                                      {{/nav.item}}
+                                    {{/bs-nav}}
+
+                                    <div class="tab-content">
+                                      {{#tab.pane elementId="pane31" class=" animated flipInX" title="Tab 1"}}
+                                        <b>Home Content</b>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                                            Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                                            pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                                            sadipscing mel.
+                                        </p>
+                                      {{/tab.pane}}
+                                      {{#tab.pane elementId="pane32" class=" animated flipInX" title="Tab 2"}}
+                                        <b>Profile Content</b>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                                            Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                                            pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                                            sadipscing mel.
+                                        </p>
+                                      {{/tab.pane}}
+                                      {{#tab.pane elementId="pane33" class=" animated flipInX" title="Tab 2"}}
+                                        <b>Message Content</b>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                                            Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                                            pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                                            sadipscing mel.
+                                        </p>
+                                      {{/tab.pane}}
+                                      {{#tab.pane elementId="pane34" class=" animated flipInX" title="Tab 2"}}
+                                      <b>Settings Content</b>
+                                      <p>
+                                          Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                                          Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                                          pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                                          sadipscing mel.
+                                      </p>
+                                      {{/tab.pane}}
+                                    </div>
+                                  {{/bs-tab}}
+
+
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+                                  {{#bs-tab customTabs=true as |tab|}}
+                                    {{#bs-nav type="tabs" as |nav|}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane41")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane41"}}> HOME</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane42")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane42"}}>PROFILE</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane43")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane43"}}> MESSAGES</a>
+                                      {{/nav.item}}
+                                      {{#nav.item active=(bs-eq tab.activeId "pane44")}}
+                                        <a href="#pane1" class="nav-link" role="tab" {{action tab.select "pane44"}}>SETTINGS</a>
+                                      {{/nav.item}}
+                                    {{/bs-nav}}
+
+                                    <div class="tab-content">
+                                      {{#tab.pane elementId="pane41" class=" animated fadeInRight" title="Tab 1"}}
+                                        <b>Home Content</b>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                                            Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                                            pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                                            sadipscing mel.
+                                        </p>
+                                      {{/tab.pane}}
+                                      {{#tab.pane elementId="pane42" class=" animated fadeInRight" title="Tab 2"}}
+                                        <b>Profile Content</b>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                                            Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                                            pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                                            sadipscing mel.
+                                        </p>
+                                      {{/tab.pane}}
+                                      {{#tab.pane elementId="pane43" class=" animated fadeInRight" title="Tab 2"}}
+                                        <b>Message Content</b>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                                            Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                                            pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                                            sadipscing mel.
+                                        </p>
+                                      {{/tab.pane}}
+                                      {{#tab.pane elementId="pane44" class=" animated fadeInRight" title="Tab 2"}}
+                                      <b>Settings Content</b>
+                                      <p>
+                                          Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                                          Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                                          pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                                          sadipscing mel.
+                                      </p>
+                                      {{/tab.pane}}
+                                    </div>
+                                  {{/bs-tab}}
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>

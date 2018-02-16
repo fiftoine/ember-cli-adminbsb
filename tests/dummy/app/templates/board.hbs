@@ -384,21 +384,18 @@
                              {{#active-link activeClass="active"}}
                                  {{#link-to 'board.ui.range-sliders'  activeClass="toggled"}}Range sliders{{/link-to}}
                              {{/active-link}}
-                             <li>
-                                 <a href="pages/ui/sortable-nestable.html">Sortable & Nestable</a>
-                             </li>
-                             <li>
-                                 <a href="pages/ui/tabs.html">Tabs</a>
-                             </li>
-                             <li>
-                                 <a href="pages/ui/thumbnails.html">Thumbnails</a>
-                             </li>
-                             <li>
-                                 <a href="pages/ui/tooltips-popovers.html">Tooltips & Popovers</a>
-                             </li>
-                             <li>
+                             {{#active-link activeClass="active"}}
+                                 {{#link-to 'board.ui.tabs'  activeClass="toggled"}}Tabs{{/link-to}}
+                             {{/active-link}}
+                             {{#active-link activeClass="active"}}
+                                 {{#link-to 'board.ui.thumbnails'  activeClass="toggled"}}Thumbnails{{/link-to}}
+                             {{/active-link}}
+                             {{#active-link activeClass="active"}}
+                                 {{#link-to 'board.ui.tooltips-popovers'  activeClass="toggled"}}Tooltips & Popovers{{/link-to}}
+                             {{/active-link}}
+                             <!--<li>
                                  <a href="pages/ui/waves.html">Waves</a>
-                             </li>
+                             </li>-->
                          </ul>
                      {{/active-link}}
                      <li>

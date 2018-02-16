@@ -1,0 +1,117 @@
+<div class="container-fluid">
+            <!-- Tooltips -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                TOOLTIPS
+                                <small>Hover over the buttons below to see tooltips:</small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix">
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+
+                                    {{#absb-button type="primary" class="btn-block"}}
+                                      TOOLTIP ON RIGHT
+                                      {{#bs-tooltip placement="right"}}Tooltip on right{{/bs-tooltip}}
+                                    {{/absb-button}}
+
+
+                                </div>
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                                  {{#absb-button type="primary" class="btn-block"}}
+                                    TOOLTIP ON TOP
+                                    {{#bs-tooltip placement="top"}}Tooltip on top{{/bs-tooltip}}
+                                  {{/absb-button}}
+
+                                </div>
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                                  {{#absb-button type="primary" class="btn-block"}}
+                                    TOOLTIP ON BOTTOM
+                                    {{#bs-tooltip placement="bottom"}}Tooltip on bottom{{/bs-tooltip}}
+                                  {{/absb-button}}
+
+                                </div>
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                                  {{#absb-button type="primary" class="btn-block"}}
+                                    TOOLTIP ON LEFT
+                                    {{#bs-tooltip placement="left"}}Tooltip on left{{/bs-tooltip}}
+                                  {{/absb-button}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Tooltips -->
+            <!-- Popovers -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                POPOVERS
+                                <small>Add small overlays of content, like those on the iPad, to any element for housing secondary information. Click over the buttons below to see popovers:</small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix">
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+
+                                  {{#absb-button type="primary"  class="btn-block"}}
+                                    POPOVER ON RIGHT
+                                    {{#bs-popover placement="right"  triggerEvents="focus" title="Popover Title"}}Vivamus sagittis lacus vel augue laoreet rutrum faucibus.{{/bs-popover}}
+                                  {{/absb-button}}
+
+
+                                </div>
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                                  {{#absb-button type="primary" class="btn-block"}}
+                                    POPOVER ON TOP
+                                    {{#bs-popover placement="top"  triggerEvents="focus" title="Popover Title"}}Vivamus sagittis lacus vel augue laoreet rutrum faucibus.{{/bs-popover}}
+                                  {{/absb-button}}
+                                </div>
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                                  {{#absb-button type="primary" class="btn-block"}}
+                                    POPOVER ON BOTTOM
+                                    {{#bs-popover placement="bottom"  triggerEvents="focus" title="Popover Title"}}Vivamus sagittis lacus vel augue laoreet rutrum faucibus.{{/bs-popover}}
+                                  {{/absb-button}}
+                                </div>
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                                  {{#absb-button type="primary" class="btn-block"}}
+                                    POPOVER ON LEFT
+                                    {{#bs-popover placement="left"  triggerEvents="focus" title="Popover Title"}}Vivamus sagittis lacus vel augue laoreet rutrum faucibus.{{/bs-popover}}
+                                  {{/absb-button}}
+                                </div>
+
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                                  {{#absb-button type="primary" class="btn-block"}}
+                                    POPOVER ON HOVER
+                                    {{#bs-popover placement="top"  triggerEvents="hover" title="Popover Title"}}Vivamus sagittis lacus vel augue laoreet rutrum faucibus.{{/bs-popover}}
+                                  {{/absb-button}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Popovers -->
+        </div>

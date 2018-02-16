@@ -45,6 +45,9 @@ Router.map(function() {
       this.route('preloaders');
       this.route('progress-bars');
       this.route('range-sliders');
+      this.route('tabs');
+      this.route('thumbnails');
+      this.route('tooltips-popovers');
     });
   });
 });

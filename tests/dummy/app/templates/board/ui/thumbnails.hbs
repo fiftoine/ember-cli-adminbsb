@@ -1,0 +1,135 @@
+
+            <div class="block-header">
+                <h2>THUMBNAILS</h2>
+            </div>
+            <!-- Default Example -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                DEFUALT EXAMPLE
+                                <small>By default, Bootstrap's thumbnails are designed to showcase linked images with minimal required markup</small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            <div class="row">
+                                <div class="col-xs-6 col-md-3">
+                                    <a href="javascript:void(0);" class="thumbnail">
+                                        <img src="http://placehold.it/500x300" class="img-responsive">
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <a href="javascript:void(0);" class="thumbnail">
+                                        <img src="http://placehold.it/500x300" class="img-responsive">
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <a href="javascript:void(0);" class="thumbnail">
+                                        <img src="http://placehold.it/500x300" class="img-responsive">
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <a href="javascript:void(0);" class="thumbnail">
+                                        <img src="http://placehold.it/500x300" class="img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Default Example -->
+            <!-- Custom Content -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                CUSTOM CONTENT
+                                <small>With a bit of extra markup, it's possible to add any kind of HTML content like headings, paragraphs, or buttons into thumbnails.</small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="thumbnail">
+                                        <img src="http://placehold.it/500x300">
+                                        <div class="caption">
+                                            <h3>Thumbnail label</h3>
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                                text ever since the 1500s
+                                            </p>
+                                            <p>
+                                                {{#absb-button type="primary"}}BUTTON{{/absb-button}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="thumbnail">
+                                        <img src="http://placehold.it/500x300">
+                                        <div class="caption">
+                                            <h3>Thumbnail label</h3>
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                                text ever since the 1500s
+                                            </p>
+                                            <p>
+                                              {{#absb-button type="primary"}}BUTTON{{/absb-button}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="thumbnail">
+                                        <img src="http://placehold.it/500x300">
+                                        <div class="caption">
+                                            <h3>Thumbnail label</h3>
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                                text ever since the 1500s
+                                            </p>
+                                            <p>
+                                                {{#absb-button type="primary"}}BUTTON{{/absb-button}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="thumbnail">
+                                        <img src="http://placehold.it/500x300">
+                                        <div class="caption">
+                                            <h3>Thumbnail label</h3>
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                                text ever since the 1500s
+                                            </p>
+                                            <p>
+                                                {{#absb-button type="primary"}}BUTTON{{/absb-button}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
