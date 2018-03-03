@@ -49,6 +49,10 @@ Router.map(function() {
       this.route('thumbnails');
       this.route('tooltips-popovers');
     });
+    this.route('forms', function() {
+      this.route('basics');
+      this.route('advanced');
+    });
   });
 });
 

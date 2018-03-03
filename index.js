@@ -39,30 +39,16 @@ module.exports = {
     app.import('vendor/adminbsb-materialdesign-waves/waves.js');
     app.import('vendor/adminbsb-materialdesign-sweetalert/sweetalert.min.js');
     app.import('vendor/adminbsb-materialdesign-bs-notify/bootstrap-notify.js');
+    app.import('vendor/adminbsb-materialdesign-autosize/autosize.js');
+    app.import('vendor/adminbsb-materialdesign-momentjs/moment.js');
+    app.import('vendor/adminbsb-materialdesign-datetimepicker/bootstrap-material-datetimepicker.js');
 
 
 
 
   },
 
-  afterInstall(){
-    this.addAddonsToProject({
-      // a packages array defines the addons to install
-      packages: [
-        // name is the addon name, and target (optional) is the version
-        {name: 'ember-bootstrap', target: '1.0.0'},
-        {name: 'ember-power-select', target: '1.10.4'},
-        {name: 'ember-composable-helpers', target: '2.1.0'},
-        {name: 'ember-math-helpers', target: '2.4.0'},
-        {name: 'ember-cli-string-helpers', target: '1.6.0'},
-        {name: 'ember-truth-helpers', target: '2.0.0'},
-        {name: 'ember-get-helper', target: '1.1.0'},
-        {name: 'ember-toggle-helper', target: '0.1.1'},
-        {name: 'ember-cli-range-slider', target: '0.2.7'},
 
-      ]
-    })
-  },
 
 
   contentFor(type, config) {
@@ -137,7 +123,25 @@ module.exports = {
       destDir: 'adminbsb-materialdesign-bs-notify',
     }));
 
-    trees = trees.concat([slimscrollFiles, waitMeFiles, countToFiles, sparklineFiles, wavesFiles, sweetAlertFiles, bsNotifyFiles]);
+    let autosizeFiles =fastbootTransform(new Funnel('node_modules/adminbsb-materialdesign', {
+      files:['autosize.js'] ,
+      srcDir: '/plugins/autosize',
+      destDir: 'adminbsb-materialdesign-autosize',
+    }));
+
+    let momentFiles =fastbootTransform(new Funnel('node_modules/adminbsb-materialdesign', {
+      files:['moment.js'] ,
+      srcDir: '/plugins/momentjs',
+      destDir: 'adminbsb-materialdesign-momentjs',
+    }));
+
+    let datetimepickerFiles =fastbootTransform(new Funnel('node_modules/adminbsb-materialdesign', {
+      files:['bootstrap-material-datetimepicker.js'] ,
+      srcDir: '/plugins/bootstrap-material-datetimepicker/js',
+      destDir: 'adminbsb-materialdesign-datetimepicker',
+    }));
+
+    trees = trees.concat([slimscrollFiles, waitMeFiles, countToFiles, sparklineFiles, wavesFiles, sweetAlertFiles, bsNotifyFiles, autosizeFiles, momentFiles, datetimepickerFiles]);
 
     if (tree) {
       trees.push(tree);
@@ -323,8 +327,15 @@ module.exports = {
       annotation: 'AdminBsbMaterialDesign-rangeslider'
     });
 
+    let datetimepickerFiles = new Funnel('node_modules/adminbsb-materialdesign', {
+      files:['bootstrap-material-datetimepicker.css'] ,
+      srcDir: '/plugins/bootstrap-material-datetimepicker/css',
+      destDir: 'adminbsb-materialdesign',
+      annotation: 'AdminBsbMaterialDesign-datetimepicker'
+    });
 
-   return this._super.treeForStyles(mergeTrees([scssFiles,materializeFiles, bootstrapFiles, wavesFiles,animateFiles,morrisFiles, waitmeFiles,sweetAlertFiles, rangeSlidersFiles, tree], { overwrite: true }));
+
+   return this._super.treeForStyles(mergeTrees([scssFiles,materializeFiles, bootstrapFiles, wavesFiles,animateFiles,morrisFiles, waitmeFiles,sweetAlertFiles, rangeSlidersFiles, datetimepickerFiles, tree], { overwrite: true }));
  },
 
  pathBase(packageName) {

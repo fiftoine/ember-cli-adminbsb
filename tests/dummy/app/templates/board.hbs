@@ -398,18 +398,19 @@
                              </li>-->
                          </ul>
                      {{/active-link}}
-                     <li>
+                     {{#active-link activeClass="active"}}
                          <a href="javascript:void(0);" class="menu-toggle">
                              <i class="material-icons">assignment</i>
                              <span>Forms</span>
                          </a>
                          <ul class="ml-menu">
-                             <li>
-                                 <a href="pages/forms/basic-form-elements.html">Basic Form Elements</a>
-                             </li>
-                             <li>
-                                 <a href="pages/forms/advanced-form-elements.html">Advanced Form Elements</a>
-                             </li>
+                           {{#active-link activeClass="active"}}
+                               {{#link-to 'board.forms.basics'  activeClass="toggled"}}Basic Form Elements{{/link-to}}
+                           {{/active-link}}
+                           {{#active-link activeClass="active"}}
+                               {{#link-to 'board.forms.advanced'  activeClass="toggled"}}Advanced Form Elements{{/link-to}}
+                           {{/active-link}}
+
                              <li>
                                  <a href="pages/forms/form-examples.html">Form Examples</a>
                              </li>
@@ -423,7 +424,7 @@
                                  <a href="pages/forms/editors.html">Editors</a>
                              </li>
                          </ul>
-                     </li>
+                      {{/active-link}}
                      <li>
                          <a href="javascript:void(0);" class="menu-toggle">
                              <i class="material-icons">view_list</i>

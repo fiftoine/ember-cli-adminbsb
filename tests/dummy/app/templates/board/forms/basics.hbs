@@ -1,0 +1,531 @@
+
+            <div class="block-header">
+                <h2>BASIC FORM ELEMENTS</h2>
+            </div>
+            <!-- Input -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                INPUT
+                                <small>Different sizes and widths</small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            <h2 class="card-inside-title">Basic Examples</h2>
+                            <div class="row clearfix">
+                                <div class="col-sm-12">
+                                    <label>Username : {{value1}}</label>
+                                    {{absb-input float=false label="Username" value=value1}}
+                                    <label>Password : {{value2}}</label>
+                                    {{absb-input type="password" float=false label="Password" value=value2}}
+
+                                </div>
+                            </div>
+
+                            <h2 class="card-inside-title">Different Widths</h2>
+                            <div class="row clearfix">
+                                <div class="col-sm-6">
+                                    {{absb-input float=false label="col-sm-6"}}
+                                </div>
+                                <div class="col-sm-6">
+                                    {{absb-input float=false label="col-sm-6"}}
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-sm-4">
+                                    {{absb-input float=false label="col-sm-4"}}
+                                </div>
+                                <div class="col-sm-4">
+                                    {{absb-input float=false label="col-sm-4"}}
+                                </div>
+                                <div class="col-sm-4">
+                                    {{absb-input float=false label="col-sm-4"}}
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-sm-3">
+                                    {{absb-input float=false label="col-sm-3"}}
+                                </div>
+                                <div class="col-sm-3">
+                                    {{absb-input float=false label="col-sm-3"}}
+                                </div>
+                                <div class="col-sm-3">
+                                  {{absb-input float=false label="col-sm-3"}}
+                                </div>
+                                <div class="col-sm-3">
+                                  {{absb-input float=false label="col-sm-3"}}
+                                </div>
+                            </div>
+
+                            <h2 class="card-inside-title">Different Sizes</h2>
+                            <div class="row clearfix">
+                                <div class="col-sm-12">
+                                    {{absb-input float=false label="Large Input" inputsize="lg"}}
+                                    {{absb-input float=false label="Default Input" }}
+                                    {{absb-input float=false label="Small Input" inputsize="sm"}}
+                                </div>
+                            </div>
+
+                            <h2 class="card-inside-title">Floating Label Examples</h2>
+                            <div class="row clearfix">
+                                <div class="col-sm-12">
+                                    {{absb-input label="Username"}}
+                                </div>
+                                <div class="col-sm-12">
+                                    {{absb-input label="Password" type="password"}}
+                                </div>
+                                <div class="col-sm-12">
+                                  {{absb-input label="Large Input" inputsize="lg"}}
+                                  {{absb-input label="Default Input" }}
+                                  {{absb-input label="Small Input" inputsize="sm"}}
+                                </div>
+                            </div>
+
+                            <h2 class="card-inside-title">Input Status</h2>
+                            <div class="row clearfix">
+
+                                <div class="col-sm-6">
+                                    {{absb-input label="Disabled" disabled=true}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Input -->
+            <!-- Textarea -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>TEXTAREA</h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            <h2 class="card-inside-title">Basic Example</h2>
+                            <div class="row clearfix">
+                                <div class="col-sm-12">
+                                    {{absb-textarea rows=4 label="Please type what you want..."}}
+
+                                </div>
+                            </div>
+
+                            <h2 class="card-inside-title">
+                                Auto Growing Vertical Direction
+                                <small>Taken from <a href="https://github.com/jackmoore/autosize/tree/master" target="_blank">github.com/jackmoore/autosize/tree/master</a></small>
+                            </h2>
+
+                              {{absb-textarea rows=4 resize=true label="Please type what you want... And please don't forget the ENTER key press multiple times :)"}}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Textarea -->
+            <!-- Select -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                SELECT
+                                <small>Taken from <a href="https://silviomoreto.github.io/bootstrap-select/" target="_blank">silviomoreto.github.io/bootstrap-select</a></small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+
+
+                          <div class="row clearfix">
+
+
+
+
+                              <div class="col-sm-6">
+
+                                {{#power-select options=(array 10 20 30 40 50 ) selected=destination onchange=(action (mut destination)) searchEnabled=false placeholder="-- Please select --" as |name|}}
+                                  {{name}}
+                                {{/power-select}}
+                                <br  />
+                                <label>Selected value : {{destination}}</label>
+                              </div>
+                              <div class="col-sm-6">
+                                  {{#power-select options=(array 'Disabled' ) disabled=true selected="Disabled" onchange=(action (mut destination)) searchEnabled=false as |name|}}
+                                    {{name}}
+                                  {{/power-select}}
+                              </div>
+                          </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Select -->
+            <!-- Checkbox -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                CHECKBOX
+                                <small>Taken from <a href="http://materializecss.com/" target="_blank">materializecss.com</a></small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            <h2 class="card-inside-title">Basic Examples</h2>
+                            <div class="demo-checkbox">
+
+                              {{absb-checkbox checked=true label="Default"}}
+                              {{absb-checkbox checked=true label="Filled In" filled=true}}
+                              {{absb-checkbox checked=true label="Default - Disabled" disabled=true}}
+                              {{absb-checkbox checked=true label="Filled In - Disabled" filled=true disabled=true clear=true}}
+
+
+                            </div>
+
+                            <h2 class="card-inside-title">With Material Design Colors</h2>
+                            <div class="demo-checkbox">
+                                {{absb-checkbox checked=true label="RED" type="red"}}
+
+
+                                {{absb-checkbox checked=true label="PINK" type="pink"}}
+                                {{absb-checkbox checked=true label="PURPLE" type="purple"}}
+                                {{absb-checkbox checked=true label="DEEP PURPLE" type="deep-purple"}}
+                                {{absb-checkbox checked=true label="INDIGO" type="indigo"}}
+                                {{absb-checkbox checked=true label="BLUE" type="blue"}}
+                                {{absb-checkbox checked=true label="LIGHT BLUE" type="light-blue"}}
+                                {{absb-checkbox checked=true label="CYAN" type="cyan"}}
+                                {{absb-checkbox checked=true label="TEAL" type="teal"}}
+                                {{absb-checkbox checked=true label="GREEN" type="green"}}
+                                {{absb-checkbox checked=true label="LIGHT GREEN" type="light-green"}}
+                                {{absb-checkbox checked=true label="LIME" type="lime"}}
+                                {{absb-checkbox checked=true label="YELLOW" type="yellow"}}
+                                {{absb-checkbox checked=true label="AMBER" type="amber"}}
+                                {{absb-checkbox checked=true label="ORANGE" type="orange"}}
+                                {{absb-checkbox checked=true label="DEEP ORANGE" type="deep-orange"}}
+                                {{absb-checkbox checked=true label="BROWN" type="brown"}}
+                                {{absb-checkbox checked=true label="GREY" type="grey"}}
+                                {{absb-checkbox checked=true label="BLUE GREY" type="blue-grey"}}
+                                {{absb-checkbox checked=true label="BLACK" type="black" clear=true}}
+
+                            </div>
+
+                            <h2 class="card-inside-title">With Material Design Colors - Filled In</h2>
+                            <div class="demo-checkbox">
+                              {{absb-checkbox checked=true label="RED" type="red" filled=true}}
+                              {{absb-checkbox checked=true label="PINK" type="pink" filled=true}}
+                              {{absb-checkbox checked=true label="PURPLE" type="purple" filled=true}}
+                              {{absb-checkbox checked=true label="DEEP PURPLE" type="deep-purple" filled=true}}
+                              {{absb-checkbox checked=true label="INDIGO" type="indigo" filled=true}}
+                              {{absb-checkbox checked=true label="BLUE" type="blue" filled=true}}
+                              {{absb-checkbox checked=true label="LIGHT BLUE" type="light-blue" filled=true}}
+                              {{absb-checkbox checked=true label="CYAN" type="cyan" filled=true}}
+                              {{absb-checkbox checked=true label="TEAL" type="teal" filled=true}}
+                              {{absb-checkbox checked=true label="GREEN" type="green" filled=true}}
+                              {{absb-checkbox checked=true label="LIGHT GREEN" type="light-green" filled=true}}
+                              {{absb-checkbox checked=true label="LIME" type="lime" filled=true}}
+                              {{absb-checkbox checked=true label="YELLOW" type="yellow" filled=true}}
+                              {{absb-checkbox checked=true label="AMBER" type="amber" filled=true}}
+                              {{absb-checkbox checked=true label="ORANGE" type="orange" filled=true}}
+                              {{absb-checkbox checked=true label="DEEP ORANGE" type="deep-orange" filled=true}}
+                              {{absb-checkbox checked=true label="BROWN" type="brown" filled=true}}
+                              {{absb-checkbox checked=true label="GREY" type="grey" filled=true}}
+                              {{absb-checkbox checked=true label="BLUE GREY" type="blue-grey" filled=true}}
+                              {{absb-checkbox checked=true label="BLACK" type="black" clear=true filled=true}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Checkbox -->
+            <!-- Radio -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                RADIO
+                                <small>Taken from <a href="http://materializecss.com/" target="_blank">materializecss.com</a></small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            <h2 class="card-inside-title">Basic Examples</h2>
+                            <div class="demo-radio-button">
+                                <label>Selected value : {{rbg1}}</label>
+                                {{#absb-radio-group value=rbg1 onChange=(action (mut rbg1)) as |rg|}}
+                                  {{rg.radio value=1 label="Radio - 1"}}
+                                  {{rg.radio value=2 label="Radio - 2"}}
+                                  {{rg.radio value=3 label="Radio - With Gap" gap=true}}
+                                  {{rg.radio value=4 label="Radio - With Gap" gap=true}}
+                                {{/absb-radio-group}}
+                                {{#absb-radio-group value=1  as |rg|}}
+                                  {{rg.radio value=1 label="Radio - Disabled" disabled=true}}
+                                {{/absb-radio-group}}
+                                {{#absb-radio-group value=1  as |rg|}}
+                                  {{rg.radio value=1 label="Radio - Disabled" gap=true disabled=true clear=true}}
+                                {{/absb-radio-group}}
+
+                            </div>
+
+                            <h2 class="card-inside-title">
+                                With Material Design Colors
+                                <small>You can use material design colors which examples are <code>.radio-col-pink, .radio-col-cyan</code> class</small>
+                            </h2>
+                            <div class="demo-radio-button">
+
+                              {{#absb-radio-group value=rbg2 onChange=(action (mut rbg2)) as |rg|}}
+                                {{rg.radio value=1 label="RED" type="red"}}
+                                {{rg.radio value=2 label="PINK" type="pink"}}
+                                {{rg.radio value=3 label="PURPLE" type="purple"}}
+                                {{rg.radio value=4 label="DEEP PURPLE" type="deep-purple"}}
+                                {{rg.radio value=5 label="INDIGO" type="indogo"}}
+                                {{rg.radio value=6 label="BLUE" type="blue"}}
+                                {{rg.radio value=7 label="LIGHT BLUE" type="light-blue"}}
+                                {{rg.radio value=8 label="CYAN" type="cyan"}}
+                                {{rg.radio value=9 label="TEAL" type="teal"}}
+                                {{rg.radio value=10 label="GREEN" type="green"}}
+                                {{rg.radio value=11 label="LIGHT GREEN" type="light-green"}}
+                                {{rg.radio value=12 label="LIME" type="lime"}}
+                                {{rg.radio value=13 label="YELLOW" type="yellow"}}
+                                {{rg.radio value=14 label="AMBER" type="amber"}}
+                                {{rg.radio value=15 label="ORANGE" type="orange"}}
+                                {{rg.radio value=16 label="DEEP ORANGE" type="deep-orange"}}
+                                {{rg.radio value=17 label="BROWN" type="brown"}}
+                                {{rg.radio value=18 label="GREY" type="grey"}}
+                                {{rg.radio value=19 label="BLUE GREY" type="blue-grey"}}
+                                {{rg.radio value=20 label="BLACK" type="black" clear=true}}
+                              {{/absb-radio-group}}
+
+
+                            </div>
+
+                            <h2 class="card-inside-title">
+                                With Material Design Colors - With Gap
+                                <small>Add to <code>.with-gap</code> class</small>
+                            </h2>
+                            <div class="demo-radio-button">
+                              {{#absb-radio-group value=rbg3 onChange=(action (mut rbg3)) as |rg|}}
+                                {{rg.radio value=1 label="RED" type="red" gap=true}}
+                                {{rg.radio value=2 label="PINK" type="pink" gap=true}}
+                                {{rg.radio value=3 label="PURPLE" type="purple" gap=true}}
+                                {{rg.radio value=4 label="DEEP PURPLE" type="deep-purple" gap=true}}
+                                {{rg.radio value=5 label="INDIGO" type="indogo" gap=true}}
+                                {{rg.radio value=6 label="BLUE" type="blue" gap=true}}
+                                {{rg.radio value=7 label="LIGHT BLUE" type="light-blue" gap=true}}
+                                {{rg.radio value=8 label="CYAN" type="cyan" gap=true}}
+                                {{rg.radio value=9 label="TEAL" type="teal" gap=true}}
+                                {{rg.radio value=10 label="GREEN" type="green" gap=true}}
+                                {{rg.radio value=11 label="LIGHT GREEN" type="light-green" gap=true}}
+                                {{rg.radio value=12 label="LIME" type="lime" gap=true}}
+                                {{rg.radio value=13 label="YELLOW" type="yellow" gap=true}}
+                                {{rg.radio value=14 label="AMBER" type="amber" gap=true}}
+                                {{rg.radio value=15 label="ORANGE" type="orange" gap=true}}
+                                {{rg.radio value=16 label="DEEP ORANGE" type="deep-orange" gap=true}}
+                                {{rg.radio value=17 label="BROWN" type="brown" gap=true}}
+                                {{rg.radio value=18 label="GREY" type="grey" gap=true}}
+                                {{rg.radio value=19 label="BLUE GREY" type="blue-grey" gap=true}}
+                                {{rg.radio value=20 label="BLACK" type="black" clear=true gap=true}}
+                              {{/absb-radio-group}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Radio -->
+            <!-- Switch Button -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                SWITCH BUTTON
+                                <small>Taken from <a href="http://materializecss.com/" target="_blank">materializecss.com</a></small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            <h2 class="card-inside-title">Basic Examples</h2>
+                            <div class="demo-switch">
+
+                                {{absb-switch labelOff="OFF" labelOn="ON" checked=true}}
+
+                                  {{absb-switch labelOff="DISABLED" disabled=true  checked=false}}
+
+                            </div>
+
+                            <h2 class="card-inside-title">
+                                With Material Design Colors
+                                <small>You can use material design colors which examples are <code>.switch-col-pink, .switch-col-teal</code> class</small>
+                            </h2>
+                            <div class="demo-switch">
+                                <div class="row clearfix">
+                                    <div class="col-sm-3">
+                                        <div class="demo-switch-title">RED</div>
+                                        {{absb-switch checked=true type="red"}}
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="demo-switch-title">PINK</div>
+                                        {{absb-switch checked=true type="pink"}}
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="demo-switch-title">PURPLE</div>
+                                        {{absb-switch checked=true type="purple"}}
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="demo-switch-title">DEEP PURPLE</div>
+                                        {{absb-switch checked=true type="deep-purple"}}
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="demo-switch-title">INDIGO</div>
+                                        {{absb-switch checked=true type="indigo"}}
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="demo-switch-title">BLUE</div>
+                                        {{absb-switch checked=true type="blue"}}
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="demo-switch-title">LIGHT BLUE</div>
+                                        {{absb-switch checked=true type="light-blue"}}
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="demo-switch-title">CYAN</div>
+                                        {{absb-switch checked=true type="cyan"}}
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="demo-switch-title">TEAL</div>
+                                        {{absb-switch checked=true type="teal"}}
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="demo-switch-title">GREEN</div>
+                                        {{absb-switch checked=true type="green"}}
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="demo-switch-title">LIGHT GREEN</div>
+                                        {{absb-switch checked=true type="light-green"}}
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="demo-switch-title">LIME</div>
+                                        {{absb-switch checked=true type="lime"}}
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="demo-switch-title">YELLOW</div>
+                                        {{absb-switch checked=true type="yellow"}}
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="demo-switch-title">AMBER</div>
+                                        {{absb-switch checked=true type="amber"}}
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="demo-switch-title">ORANGE</div>
+                                        {{absb-switch checked=true type="orange"}}
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="demo-switch-title">DEEP ORANGE</div>
+                                        {{absb-switch checked=true type="deep-orange"}}
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="demo-switch-title">BROWN</div>
+                                        {{absb-switch checked=true type="brown"}}
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="demo-switch-title">GREY</div>
+                                        {{absb-switch checked=true type="grey"}}
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="demo-switch-title">BLUE GREY</div>
+                                        {{absb-switch checked=true type="blue-grey"}}
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="demo-switch-title">BLACK</div>
+                                        {{absb-switch checked=true type="black"}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--#END# Switch Button -->
+            <!--DateTime Picker -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                DATETIME PICKER
+                                <small>Taken from <a href="https://github.com/T00rk/bootstrap-material-datetimepicker" target="_blank">github.com/T00rk/bootstrap-material-datetimepicker</a> with <a href="http://momentjs.com/" target="_blank">momentjs.com</a></small>
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix">
+                              <div class="col-sm-4">
+                                  {{absb-datetimepicker label="Start date" value=dtp1 onChange=(action (mut dtp1)) time=false}}
+                              </div>
+                              <div class="col-sm-4">
+                                  {{absb-datetimepicker label="Start time" value=dtp2 onChange=(action (mut dtp2)) date=false }}
+                              </div>
+                              <div class="col-sm-4">
+                                  {{absb-datetimepicker label="Start date & time" value=dtp3 onChange=(action (mut dtp3)) }}
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--#END# DateTime Picker -->
