@@ -1,0 +1,60 @@
+{{#if beforeIcon}}
+  <span class="input-group-addon">
+      {{material-icon icon=beforeIcon}}
+  </span>
+{{/if}}
+{{#if beforeText}}
+  <span class="input-group-addon">
+      {{{beforeText}}}
+  </span>
+{{/if}}
+
+<div class="form-line">
+  {{input
+    type=type
+    value=value
+    class="form-control"
+    placeholder=placeholder
+    disabled=disabled
+    readonly=readonly
+    required=required
+    autofocus=autofocus
+    size=size
+    tabindex=tabindex
+    maxlength=maxlength
+    name=name
+    min=min
+    max=max
+    pattern=pattern
+    accept=accept
+    autocomplete=autocomplete
+    autosave=autosave
+    formaction=formaction
+    formenctype=formenctype
+    formmethod=formmethod
+    formnovalidate=formnovalidate
+    formtarget=formtarget
+    height=height
+    inputmode=inputmode
+    multiple=multiple
+    step=step
+    width=width
+    form=form
+    selectionDirection=selectionDirection
+    spellcheck=spellcheck
+  }}
+  {{#if float}}
+    <label class="form-label">{{{label}}}</label>
+  {{/if}}
+</div>
+
+{{#if afterIcon}}
+  <span class="input-group-addon">
+      {{material-icon icon=afterIcon}}
+  </span>
+{{/if}}
+{{#if afterText}}
+  <span class="input-group-addon">
+      {{{afterText}}}
+  </span>
+{{/if}}

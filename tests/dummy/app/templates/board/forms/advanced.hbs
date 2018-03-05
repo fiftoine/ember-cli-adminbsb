@@ -276,66 +276,35 @@
                             <h2 class="card-inside-title">With Icon</h2>
                             <div class="row clearfix">
                                 <div class="col-md-4">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="material-icons">person</i>
-                                        </span>
-                                        <div class="form-line">
-                                            <input type="text" class="form-control date" placeholder="Username">
-                                        </div>
-                                    </div>
+
+                                    {{absb-input-group beforeIcon="person" label="Username"}}
+
+
+
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="input-group">
-                                        <div class="form-line">
-                                            <input type="text" class="form-control date" placeholder="Message">
-                                        </div>
-                                        <span class="input-group-addon">
-                                            <i class="material-icons">send</i>
-                                        </span>
-                                    </div>
+                                    {{absb-input-group afterIcon="send" label="Message"}}
+
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="material-icons">person</i>
-                                        </span>
-                                        <div class="form-line">
-                                            <input type="text" class="form-control date" placeholder="Recipient's username">
-                                        </div>
-                                        <span class="input-group-addon">
-                                            <i class="material-icons">send</i>
-                                        </span>
-                                    </div>
+                                    {{absb-input-group beforeIcon="person" afterIcon="send" label="Recipient's username"}}
+
                                 </div>
                             </div>
 
                             <h2 class="card-inside-title">With Text</h2>
                             <div class="row clearfix">
                                 <div class="col-md-4">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">@</span>
-                                        <div class="form-line">
-                                            <input type="text" class="form-control" placeholder="Username">
-                                        </div>
-                                    </div>
+                                  {{absb-input-group beforeText="@" label="Username"}}
+
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="input-group">
-                                        <div class="form-line">
-                                            <input type="text" class="form-control" placeholder="Recipient's username">
-                                        </div>
-                                        <span class="input-group-addon">@example.com</span>
-                                    </div>
+                                  {{absb-input-group afterText="@example.com" label="Recipient's username"}}
+
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">$</span>
-                                        <div class="form-line">
-                                            <input type="text" class="form-control date">
-                                        </div>
-                                        <span class="input-group-addon">.00</span>
-                                    </div>
+                                    {{absb-input-group afterText=".00" beforeText="$" }}
+
                                 </div>
                             </div>
 
@@ -348,70 +317,34 @@
                                     <p>
                                         <b>Input Group Large</b>
                                     </p>
-                                    <div class="input-group input-group-lg">
-                                        <span class="input-group-addon">
-                                            <i class="material-icons">person</i>
-                                        </span>
-                                        <div class="form-line">
-                                            <input type="text" class="form-control" placeholder="Username">
-                                        </div>
-                                    </div>
+
+                                    {{absb-input-group beforeIcon="person" label="Username"  inputsize="lg"}}
                                 </div>
                                 <div class="col-md-4">
                                     <p>
                                         <b>Input Group Default</b>
                                     </p>
-                                    <div class="input-group">
-                                        <div class="form-line">
-                                            <input type="text" class="form-control" placeholder="Message">
-                                        </div>
-                                        <span class="input-group-addon">
-                                            <i class="material-icons">send</i>
-                                        </span>
-                                    </div>
+                                    {{absb-input-group afterIcon="send" label="Message" }}
                                 </div>
                                 <div class="col-md-4">
                                     <p>
                                         <b>Input Group Small</b>
                                     </p>
-                                    <div class="input-group input-group-sm">
-                                        <span class="input-group-addon">
-                                            <i class="material-icons">person</i>
-                                        </span>
-                                        <div class="form-line">
-                                            <input type="text" class="form-control" placeholder="Recipient's username">
-                                        </div>
-                                        <span class="input-group-addon">
-                                            <i class="material-icons">send</i>
-                                        </span>
-                                    </div>
+
+                                    {{absb-input-group beforeIcon="person" afterIcon="send" label="Recipient's username" inputsize="sm"}}
+
                                 </div>
                             </div>
                             <div class="row clearfix">
                                 <div class="col-md-4">
-                                    <div class="input-group input-group-lg">
-                                        <span class="input-group-addon">@</span>
-                                        <div class="form-line">
-                                            <input type="text" class="form-control" placeholder="Username">
-                                        </div>
-                                    </div>
+                                    {{absb-input-group beforeText="@" label="Username" inputsize="lg"}}
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="input-group">
-                                        <div class="form-line">
-                                            <input type="text" class="form-control" placeholder="Recipient's username">
-                                        </div>
-                                        <span class="input-group-addon">@example.com</span>
-                                    </div>
+                                    {{absb-input-group afterText="@example.com" label="Recipient's username"  inputsize="sm"}}
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="input-group input-group-sm">
-                                        <span class="input-group-addon">$</span>
-                                        <div class="form-line">
-                                            <input type="text" class="form-control">
-                                        </div>
-                                        <span class="input-group-addon">.00</span>
-                                    </div>
+
+                                      {{absb-input-group afterText=".00" beforeText="$" }}
                                 </div>
                             </div>
 
