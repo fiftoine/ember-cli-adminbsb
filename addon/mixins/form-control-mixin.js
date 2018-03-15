@@ -11,9 +11,9 @@ export default Mixin.create({
 
   inputsize:null,
 
-  value:null,
+  _value:null,
 
-  
+
   placeholder:computed('float', 'label', function(){
     return this.get('float')?'':this.get('label')
   }),
@@ -42,9 +42,12 @@ export default Mixin.create({
     });
   },
 
-  valueChanged:observer('value', function(){
-    if (this.get('value') !== '') {
+  _valueChanged:observer('_value', function(){
+    if (this.get('_value') !== '') {
         this.$('.form-line').addClass('focused');
     }
-  })
+  }),
+
+  valueNotNull:computed.notEmpty('_value'),
+
 });

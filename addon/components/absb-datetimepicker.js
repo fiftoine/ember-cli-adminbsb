@@ -6,7 +6,7 @@ import { schedule} from '@ember/runloop';
 
 export default Component.extend(FormControlMixin,{
 
-  value:null,
+  _value:null,
 
   format:computed('date', 'time',function(){
     return (this.get('date')?'DD/MM/YYYY ':'') + (this.get('time')?'HH:mm':'');

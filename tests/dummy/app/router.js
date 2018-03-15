@@ -52,6 +52,7 @@ Router.map(function() {
     this.route('forms', function() {
       this.route('basics');
       this.route('advanced');
+      this.route('validation');
     });
   });
 });

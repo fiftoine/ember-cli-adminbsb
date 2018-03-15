@@ -25,9 +25,9 @@
                             <div class="row clearfix">
                                 <div class="col-sm-12">
                                     <label>Username : {{value1}}</label>
-                                    {{absb-input float=false label="Username" value=value1}}
+                                    {{absb-input float=false label="Username" value=value1 onChange=(action (mut value1))}}
                                     <label>Password : {{value2}}</label>
-                                    {{absb-input type="password" float=false label="Password" value=value2}}
+                                    {{absb-input type="password" float=false label="Password" value=value2 onChange=(action (mut value2))}}
 
                                 </div>
                             </div>
@@ -122,7 +122,7 @@
                             <h2 class="card-inside-title">Basic Example</h2>
                             <div class="row clearfix">
                                 <div class="col-sm-12">
-                                    {{absb-textarea rows=4 label="Please type what you want..."}}
+                                    {{absb-textarea rows=4 label="Please type what you want..." value=textAreaValue onChange=(action (mut textAreaValue))}}
 
                                 </div>
                             </div>
@@ -132,7 +132,7 @@
                                 <small>Taken from <a href="https://github.com/jackmoore/autosize/tree/master" target="_blank">github.com/jackmoore/autosize/tree/master</a></small>
                             </h2>
 
-                              {{absb-textarea rows=4 resize=true label="Please type what you want... And please don't forget the ENTER key press multiple times :)"}}
+                              {{absb-textarea rows=4 resize=true label="Please type what you want... And please don't forget the ENTER key press multiple times :)" value=textAreaValue2 onChange=(action (mut textAreaValue2))}}
 
                         </div>
                     </div>
@@ -207,8 +207,9 @@
                         <div class="body">
                             <h2 class="card-inside-title">Basic Examples</h2>
                             <div class="demo-checkbox">
+                              <label>Checked : {{checked1}}</label><br />
 
-                              {{absb-checkbox checked=true label="Default"}}
+                              {{absb-checkbox checked=checked1 label="Default" onChange=(action (mut checked1))}}
                               {{absb-checkbox checked=true label="Filled In" filled=true}}
                               {{absb-checkbox checked=true label="Default - Disabled" disabled=true}}
                               {{absb-checkbox checked=true label="Filled In - Disabled" filled=true disabled=true clear=true}}
@@ -299,7 +300,7 @@
                                   {{rg.radio value=3 label="Radio - With Gap" gap=true}}
                                   {{rg.radio value=4 label="Radio - With Gap" gap=true}}
                                 {{/absb-radio-group}}
-                                {{#absb-radio-group value=1  as |rg|}}
+                                {{#absb-radio-group value=1 class="m-b-0"  as |rg|}}
                                   {{rg.radio value=1 label="Radio - Disabled" disabled=true}}
                                 {{/absb-radio-group}}
                                 {{#absb-radio-group value=1  as |rg|}}
@@ -394,8 +395,8 @@
                         <div class="body">
                             <h2 class="card-inside-title">Basic Examples</h2>
                             <div class="demo-switch">
-
-                                {{absb-switch labelOff="OFF" labelOn="ON" checked=true}}
+                                <label>Checked : {{checked2}}</label><br />
+                                {{absb-switch labelOff="OFF" labelOn="ON" checked=checked2 onChange=(action (mut checked2))}}
 
                                   {{absb-switch labelOff="DISABLED" disabled=true  checked=false}}
 

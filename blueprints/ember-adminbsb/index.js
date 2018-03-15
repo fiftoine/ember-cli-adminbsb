@@ -19,6 +19,7 @@ module.exports = {
           {name: 'ember-toggle-helper', target: '0.1.1'},
           {name: 'ember-cli-range-slider', target: '0.2.7'},
           {name: 'ember-cli-bootstrap-colorpicker', target: '2.5.1'},
+          {name: 'ember-changeset-validations', target:'1.2.11'}
 
         ]
       })

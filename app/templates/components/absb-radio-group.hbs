@@ -1,5 +1,20 @@
-{{yield
-  (hash
-    radio=(component "absb-radio" groupName=elementId groupValue=value  onClick=(action "radioPressed"))
-  )
-}}
+<div class="radio-form-group">
+  {{yield
+    (hash
+      radio=(component "absb-radio" groupName=elementId groupValue=value  onClick=(action "radioPressed"))
+    )
+  }}  
+</div>
+
+
+{{#if (get changeset.error property)}}
+<div>
+  <label class="error" style="list-style:none">
+    {{#each (get (get changeset.error property) 'validation') as |error|}}
+      <li>
+        {{error}}
+      </li>
+    {{/each}}
+  </label>
+</div>
+{{/if}}

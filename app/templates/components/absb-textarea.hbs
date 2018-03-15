@@ -1,25 +1,33 @@
-<div class="form-group">
-    <div class="form-line">
-        {{textarea class="form-control {{unless resize 'no-resize'}}"
-        value=value
-        class="form-control"
-        placeholder=placeholder
-        disabled=disabled
-        name=name
-        rows=rows
-        cols=cols
-        maxlength=maxlength
-        tabindex=tabindex
-        selectionEnd=selectionEnd
-        selectionStart=selectionStart
-        selectionDirection=selectionDirection
-        wrap=wrap
-        readonly=readonly
-        autofocus=autofocus
-        form=form
-        spellcheck=spellcheck
-        required=required
 
-        }}
-    </div>
+<div class="form-line {{if valueNotNull 'focused'}} {{if (get changeset.error property)  'error'}}">
+    {{textarea class="form-control {{unless resize 'no-resize'}}"
+    value=_value
+    class="form-control"
+    placeholder=placeholder
+    disabled=disabled
+    name=name
+    rows=rows
+    cols=cols
+    maxlength=maxlength
+    tabindex=tabindex
+    selectionEnd=selectionEnd
+    selectionStart=selectionStart
+    selectionDirection=selectionDirection
+    wrap=wrap
+    readonly=readonly
+    autofocus=autofocus
+    form=form
+    spellcheck=spellcheck
+    required=required
+
+    }}
 </div>
+{{#if (get changeset.error property)}}
+  <label class="error" style="list-style:none">
+    {{#each (get (get changeset.error property) 'validation') as |error|}}
+      <li>
+        {{error}}
+      </li>
+    {{/each}}
+  </label>
+{{/if}}

@@ -414,9 +414,9 @@
                              <li>
                                  <a href="pages/forms/form-examples.html">Form Examples</a>
                              </li>
-                             <li>
-                                 <a href="pages/forms/form-validation.html">Form Validation</a>
-                             </li>
+                             {{#active-link activeClass="active"}}
+                                 {{#link-to 'board.forms.validation'  activeClass="toggled"}}Form Validation{{/link-to}}
+                             {{/active-link}}
                              <li>
                                  <a href="pages/forms/form-wizard.html">Form Wizard</a>
                              </li>

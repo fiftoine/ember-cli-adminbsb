@@ -108,7 +108,7 @@ $ember-power-select-multiple-option-line-height: 2;
 @import 'adminbsb-materialdesign/_navbar';
 
 /* Material Icons ============================== */
-@import 'adminbsb-materialdesign/materialicons';
+
 
 /* Helpers ===================================== */
 @import 'adminbsb-materialdesign/_helpers.scss';
@@ -282,7 +282,7 @@ $ember-power-select-multiple-option-line-height: 2;
 @import 'adminbsb-materialdesign/browser-support/_ie11.scss';
 @import 'adminbsb-materialdesign/themes/all-themes';
 
-
+@import 'adminbsb-materialdesign/materialicons';
 
 
 .sidebar .menu{
@@ -318,4 +318,8 @@ ul.navbar-dropdown-menu  li a{
 }
 .cb-group-clear, .rb-clear{
   float:none;
+}
+
+.radio-form-group {
+    display: inline-block;
 }

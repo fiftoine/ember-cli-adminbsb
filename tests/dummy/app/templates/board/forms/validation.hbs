@@ -1,0 +1,122 @@
+<div class="block-header">
+                <h2>
+                    FORM VALIDATION
+                    <small>Taken from <a href="https://jqueryvalidation.org/" target="_blank">jqueryvalidation.org</a></small>
+                </h2>
+            </div>
+            <!-- Basic Validation -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>BASIC VALIDATION</h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+
+
+                              {{#with (changeset model1 validationForm1 ) as |changeset|}}
+                                {{absb-input label="Name" changeset=changeset property="name"}}
+                                {{absb-input label="Surname"  changeset=changeset property="surname"}}
+                                {{absb-input label="Email"  changeset=changeset property="email"}}
+                                {{#absb-radio-group changeset=changeset property="gender" as |rg|}}
+                                  {{rg.radio value='male' label="Male" gap=true}}
+                                  {{rg.radio value='female' label="Female" gap=true class="m-l-20"}}
+                                {{/absb-radio-group}}
+                                {{absb-textarea rows=5 label="Description" changeset=changeset property="description"}}
+                                {{absb-input label="Password" type="password" changeset=changeset property="password"}}
+                                {{absb-checkbox label="I have read and accept the terms" changeset=changeset property="terms" group=true }}
+
+                                {{#absb-button type="primary" onClick=(action 'validateForm' changeset)}}SUBMIT{{/absb-button}}
+
+                              {{/with}}
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Basic Validation -->
+            <!-- Advanced Validation -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>ADVANCED VALIDATION</h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+
+                          {{#with (changeset model2 validationForm2 ) as |changeset|}}
+                            {{absb-input label="Min/Max Length" changeset=changeset property="minmaxlength" help="Min. 3, Max. 10 characters"}}
+                            {{absb-input label="Min/Max Value" changeset=changeset property="minmaxvalue" help="Min. Value: 10, Max. Value: 200"}}
+                            {{absb-input label="Url" changeset=changeset property="url" help="Starts with http://, https://, ftp:// etc"}}
+                            {{absb-input label="Date" changeset=changeset property="date" help="YYYY-MM-DD format"}}
+                            {{absb-input label="Number" type="number" changeset=changeset property="number" help="Numbers only"}}
+                            {{absb-input label="Credit Card" changeset=changeset property="creditcard" help="Ex: 1234-5678-9012-3456"}}
+                            {{#absb-button type="primary" onClick=(action 'validateForm' changeset)}}SUBMIT{{/absb-button}}
+
+                          {{/with}}
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Advanced Validation -->
+            <!-- Validation Stats -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                VALIDATION STATS
+                            </h2>
+                            {{#bs-dropdown class="header-dropdown m-r--5" as |dd| }}
+                               {{#dd.toggle tagName="i" class="material-icons"}}more_vert{{/dd.toggle}}
+                               {{#dd.menu class="pull-right" as |ddm|}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Another action{{/link-to}}{{/ddm.item}}
+                                   {{#ddm.item}}{{#link-to 'board.index'}}Something else here{{/link-to}}{{/ddm.item}}
+                                 {{/dd.menu}}
+                             {{/bs-dropdown}}
+                        </div>
+                        <div class="body">
+                            <form id="form_validation_stats">
+                                <div class="form-group form-float">
+                                    <div class="form-line focused warning">
+                                        <input type="text" class="form-control" name="warning" value="Warning" required>
+                                        <label class="form-label">Form Validation - Warning</label>
+                                    </div>
+                                </div>
+                                <div class="form-group form-float">
+                                    <div class="form-line focused error">
+                                        <input type="text" class="form-control" name="error" value="Error" required>
+                                        <label class="form-label">Form Validation - Error</label>
+                                    </div>
+                                </div>
+                                <div class="form-group form-float">
+                                    <div class="form-line focused success">
+                                        <input type="email" class="form-control" name="success" value="Success" required>
+                                        <label class="form-label">Form Validation - Success</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>

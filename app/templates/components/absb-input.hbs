@@ -1,7 +1,7 @@
-<div class="form-line">
+<div class="form-line {{if valueNotNull 'focused'}} {{if (get changeset.error property)  'error'}}">
   {{input
     type=type
-    value=value
+    value=_value
     class="form-control"
     placeholder=placeholder
     disabled=disabled
@@ -36,3 +36,15 @@
     <label class="form-label">{{{label}}}</label>
   {{/if}}
 </div>
+{{#if help}}
+  <div class="help-info">{{{help}}}</div>
+{{/if}}
+{{#if (get changeset.error property)}}
+  <label class="error" style="list-style:none">
+    {{#each (get (get changeset.error property) 'validation') as |error|}}
+      <li>
+        {{error}}
+      </li>
+    {{/each}}
+  </label>
+{{/if}}

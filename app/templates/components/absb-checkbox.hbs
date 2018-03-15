@@ -1,5 +1,5 @@
 {{input type="checkbox" id=(concat elementId '-cb')
-  checked=checked
+  checked=_checked
   disabled=disabled
   tabindex=tabindex
   indeterminate=indeterminate
@@ -9,3 +9,14 @@
   class=cbClass
 }}
 <label for={{concat elementId '-cb'}}>{{{label}}}</label>
+{{#if (get changeset.error property)}}
+<div>
+  <label class="error" style="list-style:none">
+    {{#each (get (get changeset.error property) 'validation') as |error|}}
+      <li>
+        {{error}}
+      </li>
+    {{/each}}
+  </label>
+</div>
+{{/if}}
