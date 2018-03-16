@@ -8,7 +8,7 @@
   form=form
   class=cbClass
 }}
-<label for={{concat elementId '-cb'}}>{{{label}}}</label>
+<label for={{concat elementId '-cb'}}>{{{label}}} {{yield}}</label>
 {{#if (get changeset.error property)}}
 <div>
   <label class="error" style="list-style:none">
