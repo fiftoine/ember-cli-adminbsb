@@ -53,6 +53,7 @@ export default Component.extend({
     this._super(...arguments);
     if(this.get('changeset')){
       this.addObserver(`changeset.${this.get('property')}`,this, 'changeSetChanged');
+      this.changeSetChanged();
     }
   },
 

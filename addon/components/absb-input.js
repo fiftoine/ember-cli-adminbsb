@@ -49,10 +49,11 @@ export default Component.extend(FormControlMixin, {
     this.set('_value', this.get('value'));
   }),
 
-  init() {  
+  init() {
     this._super(...arguments);
     if(this.get('changeset')){
       this.addObserver(`changeset.${this.get('property')}`,this, 'changeSetChanged');
+      this.changeSetChanged();
     }
   },
 

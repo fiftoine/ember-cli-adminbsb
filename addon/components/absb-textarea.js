@@ -60,6 +60,7 @@ export default Component.extend(FormControlMixin,{
     this._super(...arguments);
     if(this.get('changeset')){
       this.addObserver(`changeset.${this.get('property')}`,this, 'changeSetChanged');
+      this.changeSetChanged();
     }
   },
 
