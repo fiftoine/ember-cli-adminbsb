@@ -6,9 +6,12 @@ export default Component.extend({
   classNames: ['navbar'],
   collapsed:true,
 
-  withRightSadeBar:true,
+  withRightSideBar:true,
 
   dashboard:service(),
+
+  noLeftMenu:false,
+  noSearch:false,
 
 
   didInsertElement() {
@@ -48,6 +51,10 @@ export default Component.extend({
 
     displaySearch(){
       this.get('dashboard').trigger('displaySearch');
+    },
+
+    titleClick(){
+      this.sendAction('onTitleClick');
     }
   }
 

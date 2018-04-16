@@ -367,3 +367,11 @@ ul.navbar-dropdown-menu  li a{
   margin-left: -10px;
   margin-top: -40px;
 }
+
+.list-group.no-border{
+  & .list-group-item{
+    border:none;
+    padding: 4px 4px 4px 0;
+  }
+
+}

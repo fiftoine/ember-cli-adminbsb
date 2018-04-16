@@ -65,11 +65,11 @@ export default Component.extend({
 
 
   willDestroyElement: function() {
-
-    this._super(...arguments);
-
     this.get('dashboard').off('toggleLeftSidebar', this, 'toggleLeftSidebar');
     this.get('dashboard').off('toggleRightSidebar', this, 'toggleRightSidebar');
+    this._super(...arguments);
+
+
   },
 
 
